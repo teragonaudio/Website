@@ -1,0 +1,150 @@
+<html>
+  <head>
+    <title>Teragon Audio</title>
+    <style type="text/css">
+      body {
+        background-image: linear-gradient(bottom, rgb(192,192,192) 0%, rgb(107,107,107) 53%);
+        background-image: -o-linear-gradient(bottom, rgb(192,192,192) 0%, rgb(107,107,107) 53%);
+        background-image: -moz-linear-gradient(bottom, rgb(192,192,192) 0%, rgb(107,107,107) 53%);
+        background-image: -webkit-linear-gradient(bottom, rgb(192,192,192) 0%, rgb(107,107,107) 53%);
+        background-image: -ms-linear-gradient(bottom, rgb(192,192,192) 0%, rgb(107,107,107) 53%);
+        background-image: -webkit-gradient(linear,left bottom,left top,
+          color-stop(0, rgb(192,192,192)), color-stop(1.0, rgb(107,107,107)));
+      }
+      h1 {
+        color: #4d4d4d;
+        font-family: "Helvetica", sans-serif;
+        font-style: normal;
+        font-size: 16pt;
+      }
+      h2 {
+        color: #4d4d4d;
+        font-family: "Helvetica", sans-serif;
+        font-style: normal;
+        font-size: 13pt;
+      }
+      p {
+        color: #4d4d4d;
+        font-family: "Helvetica", sans-serif;
+        font-style: normal;
+        font-size: 11pt;
+      }
+      li {
+        color: #4d4d4d;
+        font-family: "Helvetica", sans-serif;
+        font-style: normal;
+        font-size: 11pt;
+      }
+      a {
+        color: #f89900;
+        font-family: "Helvetica", sans-serif;
+        font-style: normal;
+      }
+      a:visited {
+        color: #a16400;
+        font-family: "Helvetica", sans-serif;
+        font-style: normal;
+      }
+      #download-link {
+        color: #f89900;
+        font-family: "Helvetica", sans-serif;
+        font-style: normal;
+        font-size: 9pt;
+      }
+      #navbar {
+        margin: 0;
+        padding: 0;
+        height: 1em;
+      }
+      #navbar li {
+        list-style: none;
+        float: left;
+      }
+      #navbar li a {
+        display: block;
+        font-size: 12pt;
+        padding: 2px 8px;
+        background-color: #eeeeee;
+        color: #4d4d4d;
+        text-decoration: none;
+      }
+      #navbar li ul {
+        display: none;
+        width: 10em;
+        background-color: #eeeeee;
+      }
+      #navbar li:hover ul {
+        display: block;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+      }
+      #navbar li:hover li {
+        float: none;
+      }
+      #navbar li:hover li a {
+        background-color: #eeeeee;
+        font-size: 10pt;
+        color: #4d4d4d;
+      }
+      #navbar li li a:hover {
+        background-color: #faaa24;
+      }
+    </style>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try{
+        var pageTracker = _gat._getTracker("UA-4400684-1");
+        pageTracker._trackPageview();
+        } catch(err) {}
+      </script>
+  </head>
+  <body>
+    <table width="100%" cellpadding="8">
+      <tr><td><center>
+        <table cellspacing="8" cellpadding="4" bgcolor="#ffffff" width="860">
+          <tr>
+            <td colspan="2">
+              <img src="http://static.teragonaudio.com/ta_logo.png" alt="Teragon Audio"/>
+            </td>
+          </tr>
+          <tr>
+            <td bgcolor="#eeeeee" colspan="2">
+              <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/plugins">Plugins</a><ul>
+                  <li><a href="http://teragonaudio.github.com/AUNotes">AUNotes</a></li>
+                  <li><a href="http://teragonaudio.github.com/BeatCounter">BeatCounter</a></li>
+                  <li><a href="http://teragonaudio.github.com/HiLoFilter">HiLoFilter</a></li>
+                  <li><a href="http://teragonaudio.github.com/KickMaker">KickMaker</a></li>
+                  <li><a href="http://teragonaudio.github.com/PulseDelay">PulseDelay</a></li>
+                </ul></li>
+                <li><a href="/plugins">Utilities</a><ul>
+                  <li><a href="http://teragonaudio.github.com/MrsWatson">MrsWatson</a></li>
+                </ul></li>
+                <li><a href="/developer">Developers</a></li>
+                <li><a href="/developer">Performers</a></li>
+                <li><a href="/developer">Contact</a></li>
+                <li><a href="/developer">About</a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align:top">
+              {{ content }}
+            </td>
+          </tr>
+        </table>
+      </center></td></tr>
+      <tr><td><center>
+        <table cellspacing="8" cellpadding="4" bgcolor="#ffffff" width="860">
+          <tr><td>
+              <p><font size="-2"><i>Copyright (c) 2012 Teragon Audio. All software, source code, and articles on this site may <b>not</b> be republished without permission. <a href="c">Contact us</a> for more information.</i></font></p>
+          </td></tr>
+        </table>
+      </center></td></tr></table>
+  </body>
+</html>
