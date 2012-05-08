@@ -1,0 +1,6 @@
+Primary colors:
+f89900, ba852f, a16400, fcb33f, fcc771
+Secondary colors:
+f8c300, ba9c2f, a17f00, fcd33f, fcde71,
+f85c00, ba622f, a13c00, fc853f, fca571
+
