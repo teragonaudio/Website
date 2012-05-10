@@ -15,9 +15,8 @@
   pageTracker._initData();
   pageTracker._trackPageview();
 </script>
-<link rel="stylesheet" href="/css/reset.css" type="text/css" />
-<link rel="stylesheet" href="/css/default.css" type="text/css" />
-<link rel="stylesheet" href="/css/pygments.css" type="text/css" />
+<link rel="stylesheet" href="css/reset.css" type="text/css" />
+<link rel="stylesheet" href="css/default.css" type="text/css" />
 
 <!--[if IE 6]>
 <script src="js/DD_belatedPNG_0.0.7a-min.js""></script><script>DD_belatedPNG.fix('.png, .btn');</script>
@@ -34,7 +33,7 @@
           <a href="/"><img src="/images/ta_logo_inverted.png" alt="Teragon Audio"/></a>
       	</div>
         
-          <!--
+        <!--
         <div id="right">
         <form method="get" id="searchform" action="#"> 
             <fieldset class="search"> 
@@ -46,9 +45,9 @@
         -->
                 
 	</div>
-</div>											<!-- End of Header Part !-->
+</div>													<!-- End of Header Part !-->
 
-<div id="contentpart">							<!-- Start of Content Part !-->
+<div id="contentpart">									<!-- Start of Content Part !-->
 	<div class="wrapper">
         
         <ul class="menu">					<!-- This is the menu !-->
@@ -59,22 +58,32 @@
             <li class="menuitem"><a href="/contact.html">Contact</a></li>
         </ul> 
         
-        <div id="content">						
-            
-          <div class="title"><h1>{{ page.title }}</h1></div>
-          {{ content }}
+        <div id="content">
         
-        </div>									
+          <div class="title"><h1>{{ page.title }}</h1></div>
+        	<div id="main" class="news">				<!-- This is Main Content !-->
+            {{ content }}
+          </div>								<!-- End Main Content !-->						
+                
+            <div id="sidebar">					<!-- Start of Sidebar !-->
+                <ul class="sidemenu">
+                  <li><a href="http://static.teragonaudio.com/{{ page.title }}.zip"><b>Download latest version</b></a></li>
+                  <li><a href="https://github.com/teragonaudio/{{ page.title }}/zipball/master">Download source code</a></li>
+                  <li><a href="https://github.com/teragonaudio/{{ page.title }}">Project page</a></li>
+                </ul>
+            </div>								<!-- End of Sidebar !-->
+            
+        </div>
             
 		<div style="clear:both;"></div>
         
-        <div id="bottom">						<!-- This is the Footer !-->
+        <div id="bottom">					<!-- This is the Footer !-->
           <p class="footer">
-          <b>Questions or comments?</b> Send an email to <script>mail2("info", "teragonaudio", 0, "subject={{ page.title }}", "info at teragonaudio dot com")</script>. Copyright © 2012 Teragon Audio. All Rights Reserved.
+            <b>Having problems with this software?</b> Send an email to <script>mail2("support", "teragonaudio", 0, "subject={{ page.title }}", "support at teragonaudio dot com")</script>. Copyright © 2012 Teragon Audio. All Rights Reserved.
           </p>
         </div>
         
-	</div>								
-</div>											<!-- End of Content Part !-->
+	</div>
+</div>										<!-- End of Content Part !-->
 </body>
 </html>
