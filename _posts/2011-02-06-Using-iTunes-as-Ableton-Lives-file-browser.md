@@ -1,5 +1,9 @@
 ---
 layout: default
+title: How to use iTunes as Ableton Live's file browser
+category: performance
+tags: [ Ableton, iTunes ]
+redirect: /2012/05/replacing-ableton-lives-browser-with.html
 ---
 
 One of my biggest complaints with Ableton Live is the primitive and horrid

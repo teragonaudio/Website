@@ -1,5 +1,9 @@
 ---
 layout: default
+title: How to do realtime recording with effect processing on iOS
+category: development
+tags: [ iOS, iPhone, AudioUnits ]
+redirect: /2012/05/how-to-do-realtime-recording-with.html
 ---
 
 Introduction
@@ -63,47 +67,50 @@ AudioUnit and get the system ready to start delivering you sound. That routine
 looks something like this:
 
 
-    // Yeah, global variables suck, but it's kind of a necessary evil here
-    AudioUnit *audioUnit = NULL;
-    float *convertedSampleBuffer = NULL;
+{% highlight cpp %}
 
-    int initAudioSession() {
-      audioUnit = (AudioUnit*)malloc(sizeof(AudioUnit));
+// Yeah, global variables suck, but it's kind of a necessary evil here
+AudioUnit *audioUnit = NULL;
+float *convertedSampleBuffer = NULL;
 
-      if(AudioSessionInitialize(NULL, NULL, NULL, NULL) != noErr) {
-        return 1;
-      }
+int initAudioSession() {
+  audioUnit = (AudioUnit*)malloc(sizeof(AudioUnit));
 
-      if(AudioSessionSetActive(true) != noErr) {
-        return 1;
-      }
+  if(AudioSessionInitialize(NULL, NULL, NULL, NULL) != noErr) {
+    return 1;
+  }
 
-      UInt32 sessionCategory = kAudioSessionCategory_PlayAndRecord;
-      if(AudioSessionSetProperty(kAudioSessionProperty_AudioCategory,
-         sizeof(UInt32), &sessionCategory) != noErr) {
-        return 1;
-      }
+  if(AudioSessionSetActive(true) != noErr) {
+    return 1;
+  }
 
-      Float32 bufferSizeInSec = 0.02f;
-      if(AudioSessionSetProperty(kAudioSessionProperty_PreferredHardwareIOBufferDuration,
-         sizeof(Float32), &bufferSizeInSec) != noErr) {
-        return 1;
-      }
+  UInt32 sessionCategory = kAudioSessionCategory_PlayAndRecord;
+  if(AudioSessionSetProperty(kAudioSessionProperty_AudioCategory,
+     sizeof(UInt32), &sessionCategory) != noErr) {
+    return 1;
+  }
 
-      UInt32 overrideCategory = 1;
-      if(AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryDefaultToSpeaker,
-         sizeof(UInt32), &overrideCategory) != noErr) {
-        return 1;
-      }
+  Float32 bufferSizeInSec = 0.02f;
+  if(AudioSessionSetProperty(kAudioSessionProperty_PreferredHardwareIOBufferDuration,
+     sizeof(Float32), &bufferSizeInSec) != noErr) {
+    return 1;
+  }
 
-      // There are many properties you might want to provide callback functions for:
-      // kAudioSessionProperty_AudioRouteChange
-      // kAudioSessionProperty_OverrideCategoryEnableBluetoothInput
-      // etc.
+  UInt32 overrideCategory = 1;
+  if(AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryDefaultToSpeaker,
+     sizeof(UInt32), &overrideCategory) != noErr) {
+    return 1;
+  }
 
-      return 0;
-    }
+  // There are many properties you might want to provide callback functions for:
+  // kAudioSessionProperty_AudioRouteChange
+  // kAudioSessionProperty_OverrideCategoryEnableBluetoothInput
+  // etc.
 
+  return 0;
+}
+
+{% endhighlight %}
 
 Unlike audio on the desktop, you don't get to tell the system your buffer
 size. Instead, you can ask the system to provide you with an approximate
@@ -128,85 +135,88 @@ Setting up your streams
 Before you can call AudioUnitInitialize(), you need to tell the system what
 type of streams you expect to have. That code will look something like this:
 
+{% highlight cpp %}
 
-    int initAudioStreams(AudioUnit *audioUnit) {
-      UInt32 audioCategory = kAudioSessionCategory_PlayAndRecord;
-      if(AudioSessionSetProperty(kAudioSessionProperty_AudioCategory,
-         sizeof(UInt32), &audioCategory) != noErr) {
-        return 1;
-      }
-      
-      UInt32 overrideCategory = 1;
-      if(AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryDefaultToSpeaker,
-         sizeof(UInt32), &overrideCategory) != noErr) {
-        // Less serious error, but you may want to handle it and bail here
-      }
-      
-      AudioComponentDescription componentDescription;
-      componentDescription.componentType = kAudioUnitType_Output;
-      componentDescription.componentSubType = kAudioUnitSubType_RemoteIO;
-      componentDescription.componentManufacturer = kAudioUnitManufacturer_Apple;
-      componentDescription.componentFlags = 0;
-      componentDescription.componentFlagsMask = 0;
-      AudioComponent component = AudioComponentFindNext(NULL, &componentDescription);
-      if(AudioComponentInstanceNew(component, audioUnit) != noErr) {
-        return 1;
-      }
+int initAudioStreams(AudioUnit *audioUnit) {
+  UInt32 audioCategory = kAudioSessionCategory_PlayAndRecord;
+  if(AudioSessionSetProperty(kAudioSessionProperty_AudioCategory,
+     sizeof(UInt32), &audioCategory) != noErr) {
+    return 1;
+  }
+  
+  UInt32 overrideCategory = 1;
+  if(AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryDefaultToSpeaker,
+     sizeof(UInt32), &overrideCategory) != noErr) {
+    // Less serious error, but you may want to handle it and bail here
+  }
+  
+  AudioComponentDescription componentDescription;
+  componentDescription.componentType = kAudioUnitType_Output;
+  componentDescription.componentSubType = kAudioUnitSubType_RemoteIO;
+  componentDescription.componentManufacturer = kAudioUnitManufacturer_Apple;
+  componentDescription.componentFlags = 0;
+  componentDescription.componentFlagsMask = 0;
+  AudioComponent component = AudioComponentFindNext(NULL, &componentDescription);
+  if(AudioComponentInstanceNew(component, audioUnit) != noErr) {
+    return 1;
+  }
 
-      UInt32 enable = 1;
-      if(AudioUnitSetProperty(*audioUnit, kAudioOutputUnitProperty_EnableIO,
-         kAudioUnitScope_Input, 1, &enable, sizeof(UInt32)) != noErr) {
-        return 1;
-      }
+  UInt32 enable = 1;
+  if(AudioUnitSetProperty(*audioUnit, kAudioOutputUnitProperty_EnableIO,
+     kAudioUnitScope_Input, 1, &enable, sizeof(UInt32)) != noErr) {
+    return 1;
+  }
 
-      AURenderCallbackStruct callbackStruct;
-      callbackStruct.inputProc = renderCallback; // Render function
-      callbackStruct.inputProcRefCon = NULL;
-      if(AudioUnitSetProperty(*audioUnit, kAudioUnitProperty_SetRenderCallback,
-         kAudioUnitScope_Input, 0, &callbackStruct,
-         sizeof(AURenderCallbackStruct)) != noErr) {
-        return 1;
-      }
+  AURenderCallbackStruct callbackStruct;
+  callbackStruct.inputProc = renderCallback; // Render function
+  callbackStruct.inputProcRefCon = NULL;
+  if(AudioUnitSetProperty(*audioUnit, kAudioUnitProperty_SetRenderCallback,
+     kAudioUnitScope_Input, 0, &callbackStruct,
+     sizeof(AURenderCallbackStruct)) != noErr) {
+    return 1;
+  }
 
-      AudioStreamBasicDescription streamDescription;
-      // You might want to replace this with a different value, but keep in mind that the
-      // iPhone does not support all sample rates. 8kHz, 22kHz, and 44.1kHz should all work.
-      streamDescription.mSampleRate = 44100;
-      // Yes, I know you probably want floating point samples, but the iPhone isn't going
-      // to give you floating point data. You'll need to make the conversion by hand from
-      // linear PCM <-> float.
-      streamDescription.mFormatID = kAudioFormatLinearPCM;
-      // This part is important!
-      streamDescription.mFormatFlags = kAudioFormatFlagIsSignedInteger |
-        kAudioFormatFlagsNativeEndian |
-        kAudioFormatFlagIsPacked;
-      // Not sure if the iPhone supports recording >16-bit audio, but I doubt it.
-      streamDescription.mBitsPerChannel = 16;
-      // 1 sample per frame, will always be 2 as long as 16-bit samples are being used
-      streamDescription.mBytesPerFrame = 2;
-      // Record in mono. Use 2 for stereo, though I don't think the iPhone does true stereo recording
-      streamDescription.mChannelsPerFrame = 1;
-      streamDescription.mBytesPerPacket = streamDescription.mBytesPerFrame *
-        streamDescription.mChannelsPerFrame;
-      // Always should be set to 1
-      streamDescription.mFramesPerPacket = 1;
-      // Always set to 0, just to be sure
-      streamDescription.mReserved = 0;
+  AudioStreamBasicDescription streamDescription;
+  // You might want to replace this with a different value, but keep in mind that the
+  // iPhone does not support all sample rates. 8kHz, 22kHz, and 44.1kHz should all work.
+  streamDescription.mSampleRate = 44100;
+  // Yes, I know you probably want floating point samples, but the iPhone isn't going
+  // to give you floating point data. You'll need to make the conversion by hand from
+  // linear PCM <-> float.
+  streamDescription.mFormatID = kAudioFormatLinearPCM;
+  // This part is important!
+  streamDescription.mFormatFlags = kAudioFormatFlagIsSignedInteger |
+    kAudioFormatFlagsNativeEndian |
+    kAudioFormatFlagIsPacked;
+  // Not sure if the iPhone supports recording >16-bit audio, but I doubt it.
+  streamDescription.mBitsPerChannel = 16;
+  // 1 sample per frame, will always be 2 as long as 16-bit samples are being used
+  streamDescription.mBytesPerFrame = 2;
+  // Record in mono. Use 2 for stereo, though I don't think the iPhone does true stereo recording
+  streamDescription.mChannelsPerFrame = 1;
+  streamDescription.mBytesPerPacket = streamDescription.mBytesPerFrame *
+    streamDescription.mChannelsPerFrame;
+  // Always should be set to 1
+  streamDescription.mFramesPerPacket = 1;
+  // Always set to 0, just to be sure
+  streamDescription.mReserved = 0;
 
-      // Set up input stream with above properties
-      if(AudioUnitSetProperty(*audioUnit, kAudioUnitProperty_StreamFormat,
-         kAudioUnitScope_Input, 0, &streamDescription, sizeof(streamDescription)) != noErr) {
-        return 1;
-      }
+  // Set up input stream with above properties
+  if(AudioUnitSetProperty(*audioUnit, kAudioUnitProperty_StreamFormat,
+     kAudioUnitScope_Input, 0, &streamDescription, sizeof(streamDescription)) != noErr) {
+    return 1;
+  }
 
-      // Ditto for the output stream, which we will be sending the processed audio to
-      if(AudioUnitSetProperty(*audioUnit, kAudioUnitProperty_StreamFormat,
-         kAudioUnitScope_Output, 1, &streamDescription, sizeof(streamDescription)) != noErr) {
-        return 1;
-      }
+  // Ditto for the output stream, which we will be sending the processed audio to
+  if(AudioUnitSetProperty(*audioUnit, kAudioUnitProperty_StreamFormat,
+     kAudioUnitScope_Output, 1, &streamDescription, sizeof(streamDescription)) != noErr) {
+    return 1;
+  }
 
-      return 0;
-    }
+  return 0;
+}
+
+{% endhighlight %}
 
 
 It might be tempting to use the kAudioFormatFlagIsFloat flag when setting up
@@ -222,18 +232,21 @@ Starting audio processing
 At this point, everything is ready to go and we can tell the OS to start
 recording and sending us data.
 
+{% highlight cpp %}
 
-    int startAudioUnit(AudioUnit *audioUnit) {
-      if(AudioUnitInitialize(*audioUnit) != noErr) {
-        return 1;
-      }
+int startAudioUnit(AudioUnit *audioUnit) {
+  if(AudioUnitInitialize(*audioUnit) != noErr) {
+    return 1;
+  }
 
-      if(AudioOutputUnitStart(*audioUnit) != noErr) {
-        return 1;
-      }
+  if(AudioOutputUnitStart(*audioUnit) != noErr) {
+    return 1;
+  }
 
-      return 0;
-    }
+  return 0;
+}
+
+{% endhighlight %}
 
 
 Processing data in the callback
@@ -247,47 +260,49 @@ and can keep the data in linear PCM. The below example demonstrates floating
 point data conversion, but if you can do everything with integer math, it will
 of course be more efficient.
 
+{% highlight cpp %}
 
-    OSStatus renderCallback(void *userData, AudioUnitRenderActionFlags *actionFlags,
-                            const AudioTimeStamp *audioTimeStamp, UInt32 busNumber,
-                            UInt32 numFrames, AudioBufferList *buffers) {
-      OSStatus status = AudioUnitRender(*audioUnit, actionFlags, audioTimeStamp,
-        1, numFrames, buffers);
-      if(status != noErr) {
-        return status;
-      }
+OSStatus renderCallback(void *userData, AudioUnitRenderActionFlags *actionFlags,
+                        const AudioTimeStamp *audioTimeStamp, UInt32 busNumber,
+                        UInt32 numFrames, AudioBufferList *buffers) {
+  OSStatus status = AudioUnitRender(*audioUnit, actionFlags, audioTimeStamp,
+    1, numFrames, buffers);
+  if(status != noErr) {
+    return status;
+  }
 
-      if(convertedSampleBuffer == NULL) {
-        // Lazy initialization of this buffer is necessary because we don't
-        // know the frame count until the first callback
-        convertedSampleBuffer = (float*)malloc(sizeof(float) * numFrames);
-      }
+  if(convertedSampleBuffer == NULL) {
+    // Lazy initialization of this buffer is necessary because we don't
+    // know the frame count until the first callback
+    convertedSampleBuffer = (float*)malloc(sizeof(float) * numFrames);
+  }
 
-      SInt16 *inputFrames = (SInt16*)(buffers->mBuffers->mData);
+  SInt16 *inputFrames = (SInt16*)(buffers->mBuffers->mData);
 
-      // If your DSP code can use integers, then don't bother converting to
-      // floats here, as it just wastes CPU. However, most DSP algorithms rely
-      // on floating point, and this is especially true if you are porting a
-      // VST/AU to iOS.
-      for(int i = 0; i < numFrames; i++) {
-        convertedSampleBuffer[i] = (float)inputFrames[i] / 32768f;
-      }
+  // If your DSP code can use integers, then don't bother converting to
+  // floats here, as it just wastes CPU. However, most DSP algorithms rely
+  // on floating point, and this is especially true if you are porting a
+  // VST/AU to iOS.
+  for(int i = 0; i < numFrames; i++) {
+    convertedSampleBuffer[i] = (float)inputFrames[i] / 32768f;
+  }
 
-      // Now we have floating point sample data from the render callback! We
-      // can send it along for further processing, for example:
-      // plugin->processReplacing(convertedSampleBuffer, NULL, sampleFrames);
+  // Now we have floating point sample data from the render callback! We
+  // can send it along for further processing, for example:
+  // plugin->processReplacing(convertedSampleBuffer, NULL, sampleFrames);
 
-      // Assuming that you have processed in place, we can now write the
-      // floating point data back to the input buffer.
-      for(int i = 0; i < numFrames; i++) {
-        // Note that we multiply by 32767 here, NOT 32768. This is to avoid
-        // overflow errors (and thus clipping).
-        inputFrames[i] = (SInt16)(convertedSampleBuffer[i] * 32767f);
-      }
+  // Assuming that you have processed in place, we can now write the
+  // floating point data back to the input buffer.
+  for(int i = 0; i < numFrames; i++) {
+    // Note that we multiply by 32767 here, NOT 32768. This is to avoid
+    // overflow errors (and thus clipping).
+    inputFrames[i] = (SInt16)(convertedSampleBuffer[i] * 32767f);
+  }
 
-      return noErr;
-    }
+  return noErr;
+}
 
+{% endhighlight %}
 
 Keep in mind that this code will be called several times *per second*. Best
 development practices tend to advocate lazy initialization and runtime checks
@@ -318,19 +333,22 @@ Shutting down
 When you are finished processing audio, you need to tell the OS to stop
 processing and free the AudioUnit's resources.
 
+{% highlight cpp %}
 
-    int stopProcessingAudio(AudioUnit *audioUnit) {
-      if(AudioOutputUnitStop(*audioUnit) != noErr) {
-        return 1;
-      }
+int stopProcessingAudio(AudioUnit *audioUnit) {
+  if(AudioOutputUnitStop(*audioUnit) != noErr) {
+    return 1;
+  }
 
-      if(AudioUnitUninitialize(*audioUnit) != noErr) {
-        return 1;
-      }
+  if(AudioUnitUninitialize(*audioUnit) != noErr) {
+    return 1;
+  }
 
-      *audioUnit = NULL;
-      return 0;
-    }
+  *audioUnit = NULL;
+  return 0;
+}
+
+{% endhighlight %}
 
 
 Other considerations
