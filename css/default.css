@@ -27,6 +27,14 @@ h3 {font-size: 15px; color: #333; margin-bottom: 4px; }
 h4 {font-size: 12px; color: #666; margin-bottom: 4px; }
 h5 {font-size: 10px; color: #999; line-height: 1em; margin-bottom: 4px; }
 
+hr {
+  border: 0;
+  color: #e9e9e9;
+  background-color: #e9e9e9;
+  width: 80%;
+  height: 1px;
+}
+
 /*----Text styling / Paragraphs-----*/
 
 .panelp {color: #8c8683; font-size: 12px;} /*Class for paragraphs inside a panel slider */
@@ -67,13 +75,15 @@ li {
 	
 #bigheader {
 	height: 300px;
-	background: #000 url(../images/home.jpg) no-repeat center top;
+	background: url(/images/carbon_fibre.png);
+  background-repeat: repeat;
 	overflow: hidden;
 	}
 
 #smallheader {
 	height: 100px;
-	background: #000 url(../images/home.jpg) no-repeat center top;
+	background: url(/images/carbon_fibre.png);
+  background-repeat: repeat;
 	overflow: hidden;
 	}
 
