@@ -3,8 +3,8 @@ layout: product
 title: KickMaker
 ---
 
-About KickMaker
-===============
+KickMaker
+=========
 
 KickMaker is a synthesizer designed specifically to create good kick drum
 sounds. It uses four independent oscillators and a wide range of effects,

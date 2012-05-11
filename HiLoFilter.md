@@ -3,8 +3,8 @@ layout: product
 title: HiLoFilter
 ---
 
-About HiLoFilter
-================
+HiLoFilter
+==========
 
 HiLoFilter is a simple hipass and lopass filter which can be easily controlled
 with a single knob. It is loosely inspired by the same type of filter found on
