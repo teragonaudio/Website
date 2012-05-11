@@ -1,89 +1,67 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ page.title }}</title>
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script language="javascript" src="/js/email.js"></script>
-<!-- google analytics -->
-<script type='text/javascript'> 
-  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type='text/javascript'> 
-  var pageTracker = _gat._getTracker("UA-4400684-1");
-  pageTracker._initData();
-  pageTracker._trackPageview();
-</script>
-<link rel="stylesheet" href="css/reset.css" type="text/css" />
-<link rel="stylesheet" href="css/default.css" type="text/css" />
+    <link rel="stylesheet" href="/css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="/css/default.css" type="text/css" />
 
-<!--[if IE 6]>
-<script src="js/DD_belatedPNG_0.0.7a-min.js""></script><script>DD_belatedPNG.fix('.png, .btn');</script>
-<![endif]-->
-
-<title>{{ page.title }}</title>
-
-</head>
-<body>
-<div id="smallheader">						<!-- Start of Header Part !-->
-	<div class="wrapper">
-    
+    <script language="javascript" src="/js/email.js"></script>
+    {% include analytics.html %}
+  </head>
+  <body>
+    <div id="smallheader">
+      <div class="wrapper">
         <div id="logo">
           <a href="/"><img src="/images/ta_logo_inverted.png" alt="Teragon Audio"/></a>
-      	</div>
-        
+        </div>
+
         <!--
         <div id="right">
-        <form method="get" id="searchform" action="#"> 
+          <form method="get" id="searchform" action="#"> 
             <fieldset class="search"> 
-                <input type="text" class="box" /> 
-                <button class="btn" title="Search">Search</button> 
+              <input type="text" class="box" /> 
+              <button class="btn" title="Search">Search</button> 
             </fieldset> 
-        </form>
+          </form>
         </div> 
         -->
-                
-	</div>
-</div>													<!-- End of Header Part !-->
-
-<div id="contentpart">									<!-- Start of Content Part !-->
-	<div class="wrapper">
-        
-        <ul class="menu">					<!-- This is the menu !-->
-            <li class="menuitem"><a href="index.html">Home</a></li>
-            <li class="menuitem"><a href="/plugins.html">Plugins</a></li>
-            <li class="menuitem"><a href="/developers.html">Developers</a></li>
-            <li class="menuitem"><a href="/performers.html">Performers</a></li>
-            <li class="menuitem"><a href="/contact.html">Contact</a></li>
-        </ul> 
-        
+      </div>
+    </div>
+    <div id="contentpart">
+      <div class="wrapper">
+        {% include menu.html %}
+          
         <div id="content">
-        
-          <div class="title"><h1>{{ page.title }}</h1></div>
-        	<div id="main" class="news">				<!-- This is Main Content !-->
+          <div class="title">
+            <h1>
+              {{ page.title }}
+            </h1>
+          </div>
+          <div id="main" class="news">
+            <!-- Start content -->
             {{ content }}
-          </div>								<!-- End Main Content !-->						
-                
-            <div id="sidebar">					<!-- Start of Sidebar !-->
-                <ul class="sidemenu">
-                  <li><a href="http://static.teragonaudio.com/{{ page.title }}.zip"><b>Download latest version</b></a></li>
-                  <li><a href="https://github.com/teragonaudio/{{ page.title }}/zipball/master">Download source code</a></li>
-                  <li><a href="https://github.com/teragonaudio/{{ page.title }}">Project page</a></li>
-                </ul>
-            </div>								<!-- End of Sidebar !-->
-            
+            <!-- End content -->
+          </div>
+          <div id="sidebar">
+            <ul class="sidemenu">
+              <li><a href="http://static.teragonaudio.com/{{ page.title }}.zip"><b>Download latest version</b></a></li>
+              <li><a href="https://github.com/teragonaudio/{{ page.title }}/zipball/master">Download source code</a></li>
+              <li><a href="https://github.com/teragonaudio/{{ page.title }}">Project page</a></li>
+            </ul>
+          </div>
         </div>
-            
-		<div style="clear:both;"></div>
-        
-        <div id="bottom">					<!-- This is the Footer !-->
+
+        <div style="clear:both;"></div>
+        <div id="bottom">
           <p class="footer">
-            <b>Having problems with this software?</b> Send an email to <script>mail2("support", "teragonaudio", 0, "subject={{ page.title }}", "support at teragonaudio dot com")</script>. Copyright © 2012 Teragon Audio. All Rights Reserved.
+            <b>Having problems with this software?</b> Send an email to
+            <script>mail2("support", "teragonaudio", 0, "subject={{ page.title }}", "support at teragonaudio dot com")</script>.
+            {% include copyright.html %}
           </p>
         </div>
-        
-	</div>
-</div>										<!-- End of Content Part !-->
-</body>
+      </div>
+    </div>
+  </body>
 </html>

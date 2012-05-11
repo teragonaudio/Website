@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>{{ page.title }}</title>
+
+    <link rel="stylesheet" href="/css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="/css/default.css" type="text/css" />
+
+    {% include analytics.html %}
+  </head>
+
+  <body id="index">
+    <div id="bigheader">
+      <div class="wrapper">
+        <div id="logocenter">
+          <img src="/images/ta_logo_large_inverted.png" alt="Teragon Audio"/>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </div>
+    <div id="contentpart">
+      <div class="wrapper">
+        {% include menu.html %}
+        
+        <div id="content"> 					      
+          <!-- Start content -->
+          {{ content }}
+          <!-- End content -->
+        </div>								
+        
+        <div style="clear:both;"></div>
+        <div id="bottom">
+          <p class="footer">
+            {% include copyright.html %}
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
