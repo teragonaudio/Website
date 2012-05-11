@@ -68,7 +68,7 @@ blockquote p {
 }
 
 li {
-  margin-left: 26px;
+/*  margin-left: 26px; */
 }
 
 /*---------------Header Part----------------*/
@@ -240,10 +240,18 @@ li {
 		/*---------------Menu----------------*/
 		
 		.menu {
+      padding: 0;
+      border: 0;
+      outline: 0;
+      font-size: 100%;
+      vertical-align: baseline;
+      background: transparent;
 			float: left;
 			height: 50px;
       margin-left: 0px;
+      margin-top: 0px;
 			margin-bottom: 4px;
+      margin-right: 0px;
 			list-style: none;
 			}
 		
@@ -254,7 +262,8 @@ li {
 		
 		.menu li a{
 			float: left;
-			color: #666;
+			color: #a16400;
+      font-weight: bold;
 			text-decoration:none;
 			display: block;
 			padding-left: 15px;
@@ -265,7 +274,7 @@ li {
 			text-align: center;
 			}
 		
-		.menu li a:hover{
+		.menu li a:hover {
 			background: #cccccc;
 			color: #fff;
 			}
