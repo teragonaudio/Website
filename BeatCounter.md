@@ -3,6 +3,8 @@ layout: product
 title: BeatCounter
 ---
 
+BeatCounter
+===========
 BeatCounter is a simple plugin designed to facilitate beatmatching software
 and turntables. It displays the current tempo in beats per minute (BPM), while
 the bottom window displays an accumulated average over the last few seconds.
