@@ -3,7 +3,7 @@ layout: default
 title: A brief comparison of Android audio frameworks
 category: development
 tags: [ Android ]
-redirect: /2012/05/few-words-on-android-audio-programming.html
+alias: /2012/05/few-words-on-android-audio-programming.html
 ---
 
 I wanted to offer a quick bit of advice regarding playing sounds in Android.

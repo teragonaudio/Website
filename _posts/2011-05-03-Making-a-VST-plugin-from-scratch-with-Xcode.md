@@ -3,7 +3,7 @@ layout: default
 title: Making a VST plugin from scratch with Xcode
 categories: development
 tags: [ VST, Xcode, Mac ]
-redirect: /2010/06/making-vst-plugin-from-scratch-with.html
+alias: /2010/06/making-vst-plugin-from-scratch-with.html
 ---
 
 Introduction

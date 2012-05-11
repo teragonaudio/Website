@@ -1,6 +1,7 @@
 ---
 layout: product
 title: KickMaker
+alias: /p/KickMaker.html
 ---
 
 KickMaker

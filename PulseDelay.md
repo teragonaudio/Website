@@ -1,6 +1,7 @@
 ---
 layout: product
 title: PulseDelay
+alias: /p/PulseDelay.html
 ---
 
 PulseDelay

@@ -1,6 +1,7 @@
 ---
 layout: product
 title: BeatCounter
+alias: /p/BeatCounter.html
 ---
 
 BeatCounter

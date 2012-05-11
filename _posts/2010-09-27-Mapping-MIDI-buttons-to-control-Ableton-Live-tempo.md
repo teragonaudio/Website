@@ -3,7 +3,7 @@ layout: default
 title: Mapping MIDI buttons to control Ableton Live's tempo
 category: performance
 tags: [ Ableton, MIDI ]
-redirect: /2012/05/midi-mapping-buttons-to-control-ableton.html
+alias: /2012/05/midi-mapping-buttons-to-control-ableton.html
 ---
 
 A friend of mine recently tipped me off to a nice trick in Ableton Live. For a

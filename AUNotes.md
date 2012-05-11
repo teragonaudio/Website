@@ -1,6 +1,7 @@
 ---
 layout: product
 title: AUNotes
+alias: /p/AUNotes.html
 ---
 
 AUNotes

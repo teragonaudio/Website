@@ -1,6 +1,7 @@
 ---
 layout: product
 title: HiLoFilter
+alias: /p/HiLoFilter.html
 ---
 
 HiLoFilter

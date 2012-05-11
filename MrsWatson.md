@@ -1,6 +1,7 @@
 ---
 layout: product
 title: MrsWatson
+alias: /p/MrsWatson.html
 ---
 
 MrsWatson
