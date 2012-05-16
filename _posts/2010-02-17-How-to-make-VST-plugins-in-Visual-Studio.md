@@ -2,7 +2,7 @@
 layout: default
 title: How to make VST plugins in Visual Studio
 category: development
-tags: [ VST ]
+tags: [ VST, Intro ]
 alias: /2010/02/how-to-make-vst-plugins-in-visual.html
 ---
 

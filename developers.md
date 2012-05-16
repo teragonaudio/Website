@@ -9,6 +9,11 @@ Getting started with audio development
 So you've got a great idea for a piece of audio software and don't know where
 to start? Our developer guides will set you on the right path.
 
+<ul class="posts">
+  {% for post in site.tags.Intro %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
 
 All development-related articles
 --------------------------------
