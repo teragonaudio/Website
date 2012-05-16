@@ -117,12 +117,12 @@ size. Instead, you can ask the system to provide you with an approximate
 buffer size. iOS does not guarantee to return the exact buffer size that
 you've asked for, but it will give you something which works for the device
 and is near what you request. Certain types of DSP applications, such as those
-using FFT, will greatly benefit from having known buffersizes during runtime
+using FFT, will greatly benefit from having known buffer sizes during runtime
 or compile time, but most other audio effect processing shouldn't matter too
-much. Unless you need a specific buffersize, you should code flexibly and let
+much. Unless you need a specific buffer size, you should code flexibly and let
 the system decide for you.
 
-If you do need a specific buffersize, however, you should create
+If you do need a specific buffer size, however, you should create
 statically-sized structures and proxy buffers to deliver them to the size that
 iOS determines. This will introduce extra latency, but will improve
 performance in these cases. And please note, this in a very small number of

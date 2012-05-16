@@ -266,7 +266,7 @@ configurations:
 Adding support for VSTGUI (optional)
 ------------------------------------
 
-nclude VSTGUI support in your plugin, simply add the VSTGUI files into your
+Include VSTGUI support in your plugin, simply add the VSTGUI files into your
 project in addition to your own editor class. At a very minimum, these are:
 
 * aeffguieditor.cpp
@@ -314,7 +314,7 @@ IDB_BITMAP2 PNG DISCARDABLE "../resources/bmp10002.png"
 {% endhighlight %}
 
 The path must be relative to the location of the project file. Then, in
-`resource.h`, add the following proprocessor definitions:
+`resource.h`, add the following preprocessor definitions:
 
 {% highlight cpp %}
 
@@ -390,7 +390,7 @@ not correctly added to the VC++ solution.
 Linking errors with symbols defined multiple times
 --------------------------------------------------
 
-This is undoubtably one of the most frustrating problems which can occur when
+This is undoubtedly one of the most frustrating problems which can occur when
 building a VST in VC++. If you are seeing error messages like this, then it
 most likely means there is some problem with your library configuration:
 

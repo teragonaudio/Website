@@ -8,7 +8,7 @@ tags: [ Ableton, MIDI ]
 Introduction
 ------------
 
-There are lots of blog posts, forum arguments, and youtube videos that will
+There are lots of blog posts, forum arguments, and YouTube videos that will
 explain to you how to use MIDI sync to synchronize Ableton Live with other
 music software. This is not one of those posts; instead, I will try to
 convince you why you should *not* try to do this, and recommend a better,
@@ -43,11 +43,11 @@ streaming data which is required here. Among the problems which you will
 encounter here are:
 
 * Drift, which occurs when the two hosts are no longer in tight sync. Programs
-  like Traktor can force a resync, but this usually causes Live to drop audio
-  and jitter for a split second while it resyncs. Not good.
+  like Traktor can force a re-sync, but this usually causes Live to drop audio
+  and jitter for a split second while it re-syncs. Not good.
 * Packet loss, which occurs when the MIDI sync stream is broken. In this case,
   the only way to re-establish sync is to stop the master host and restart
-  playbak. Also not good.
+  playback. Also not good.
 * Slow follow, which occurs when (God forbid) you want to change the tempo of
   the master host. The slave will eventually catch up to the tempo changes,
   but there is a noticeable lag, and sync will probably be totally off by the

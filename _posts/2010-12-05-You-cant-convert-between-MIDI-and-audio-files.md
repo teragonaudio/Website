@@ -102,7 +102,7 @@ synthesizers, check out the [plugin database at KVR audio][16].
 
 If you have 10,000 MIDI files to batch-convert to MP3's, I am sorry to say
 that there is no easy solution for you. All of the shareware you'll when
-googling for "convert MIDI to MP3" is terrible. If these programs can even
+Googling for "convert MIDI to MP3" is terrible. If these programs can even
 manage to bounce a MIDI file to audio (and many of them can't even do this),
 it will sound absolutely horrid, because the synthesizers built into such
 software are generally very low-quality. Imagine what you would hear in a

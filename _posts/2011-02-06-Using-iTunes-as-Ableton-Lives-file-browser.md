@@ -37,7 +37,7 @@ want to import all of your DJ tracks into it, particularly if you already
 have organized them to your liking. If this is the case, first disable "Keep
 iTunes Media folder organized" and "Copy files to iTunes Media folder when
 adding to library". This will prevent iTunes from mangling your music or
-renaming tracks which already have an associated asd file.
+renaming tracks which already have an associated ASD file.
 
 
 ![iTunes Preferences as they (mostly) should appear](http://static.nikreiman.com/ableton_itunes_advanced_prefs.png)
@@ -50,7 +50,7 @@ library somewhere on your hard drive. Now, take your existing music library
 and move it to the folder you just created underneath iTunes Media/Music.
 Drag all of these folders into iTunes to import them into the new library.
 After importing, simply quit iTunes and re-open with the alt/option key to
-switch back to your main iTunes libarary.
+switch back to your main iTunes library.
 
 
 ![Choose iTunes Library dialog](http://static.nikreiman.com/ableton_itunes_choose_library.png)
@@ -63,7 +63,7 @@ dropped in. However, they will be sorted under iTunes Media/Music/Artist
 Name/Album Name, which may clash with any existing organizational scheme in
 place. If you are planning on using this feature along with Live, add the
 files first before warping them, or else iTunes will copy only the music file
-and move the associated asd file behind in a directory named "Not Moved".
+and move the associated ASD file behind in a directory named "Not Moved".
 
 Software such as [Cadence][1] and [Tangerine!][2] are available to read your
 iTunes library and analyze the BPM of your tracks. Other software such as

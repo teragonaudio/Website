@@ -417,7 +417,7 @@ to thoroughly read the VST SDK header files and other associated
 documentation, as they will provide you with further hints as to the correct
 implementation. Also, you should take time to create good logging facilities
 in your host, particularly in the `hostCallback()` method, as most plugin
-incompatibilities are usually triggered from some miscommunication there.
+incompatibilities are usually triggered from some error there.
 
 
 [1]: http://www.codeplex.com/vstnet
