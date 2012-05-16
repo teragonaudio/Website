@@ -7,7 +7,7 @@ Getting started with audio development
 --------------------------------------
 
 So you've got a great idea for a piece of audio software and don't know where
-to start? Our developer guides will set you on the right path.
+to start? Check out these guides:
 
 <ul class="posts">
   {% for post in site.tags.Intro %}
