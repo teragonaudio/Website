@@ -89,7 +89,10 @@ Otherwise, you need to create the following files:
 
 You will also need to add the files from the VST SDK, which includes
 everything under the `vstsdk2.4/public.sdk/source/vst2.x` and
-`vstsdk2.4/pluginterfaces/vst2.x` directories.
+`vstsdk2.4/pluginterfaces/vst2.x` directories. I usually prefer to manually
+make groups for these directories and drag the files to the groups from
+Explorer, as dragging the entire "vstsdk2.4" directory to VS can cause it to
+choke when it tries to add a bunch of unused files to the project.
 
 
 To start out with, the plugin's entry point header file (YourProjectName.h)
@@ -135,6 +138,8 @@ VstInt32 sampleFrames) {
 }
 
 {% endhighlight %}
+
+Note that your project won't compile just yet, but be patient!
 
 The above code samples are simply blank entry points which don't do anything
 exciting. The VST SDK offers lots of methods which you can override in order
@@ -302,9 +307,9 @@ Instead, place the libraries in a directory of your choosing and be sure to
 add this path to the list of "Additional Library Directories" in the Linker
 preferences for your project. You may choose to place the libraries in the
 same directory as the Microsoft Platform SDK stuff, but I personally prefer to
-keep them in a separate directory checked into CVS. Also be sure to add
-references to `libpng.lib` and `zlib.lib` for your project in the "Additional
-Dependencies" section of your Linker preferences for the project.
+keep them in a separate directory checked into version control. Also be sure
+to add references to `libpng.lib` and `zlib.lib` for your project in the
+"Additional Dependencies" section of your Linker preferences for the project.
 
 {% highlight text %}
 
