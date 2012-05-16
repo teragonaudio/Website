@@ -66,7 +66,7 @@ YourProjectName. In the rest of this tutorial, whenever you see
 YourProjectName, replace that text with the actual name of your project.
 
 In Visual Studio 9, you'd make a new project with the wizard found at File ->
-New -> Project. Select Visual C++ ->→Win32 Console Application, and choose a
+New -> Project. Select Visual C++ -> Win32 Console Application, and choose a
 directory for your project. When the wizard opens, press "Next" and select
 DLL as the Application Type. Also check the "Empty Project" box.
 
