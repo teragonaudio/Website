@@ -1,0 +1,6 @@
+- Flowchart for which lang to learn
+- VST development power tools (debugging, IDE's, etc)
+- Good DSP links
+- Ableton live optimization
+- Warp mode tricks
+- Warping like a pro
