@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Developer Resources
+alias: /p/developer-tools.html
 ---
 
 Getting started with audio development
