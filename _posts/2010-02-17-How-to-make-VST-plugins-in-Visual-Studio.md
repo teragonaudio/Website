@@ -333,19 +333,18 @@ VC++ ships with an optimizing compiler, but sometimes the compiler will choke
 on certain files and optimization must be disabled. In particular, I have
 experienced this with Laurent de Soras' FFTReal libraries, since they are
 written as template classes. In general, however, optimization is a good idea,
-as is Eliminating Unreferenced Data (in the linker settings). The "Whole
+as is "Eliminating Unreferenced Data" (in the linker settings). The "Whole
 Program Optimization" setting appears tempting, but usually results in dozens
 of build errors and problems, so it's best to avoid this. Also, be sure to use
 the optimization features of this compiler and linker, as they can greatly
 boost runtime performance.
 
-If you are developing on a multi-core machine, then you should disable
+If you are developing on a multi-core machine, then you might need to disable
 parallel builds by setting the number of parallel builds to 1 under Tools ->
-Options -> Projects and Solutions -> Build and Run. VS does not always link
-your projects in the order which you would expect it to, and this causes
-errors during linking with missing symbols. This behavior may be fixed in more
-recent builds of VC++, but as of this writing, I was still having experiencing
-this problem.
+Options -> Projects and Solutions -> Build and Run. In past verisons of VS, I
+noticed that the compiler does not always link projects in the order one would
+expect, which caused odd errors during linking about missing symbols. However,
+VS2010 users probably shouldn't need worry about this setting.
 
 
 Troubleshooting Common Problems
