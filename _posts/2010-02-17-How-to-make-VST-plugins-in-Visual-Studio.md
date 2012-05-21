@@ -37,8 +37,8 @@ Download required packages
 
 1. [Steinberg's VST SDK][5], which requires you to make a free [Steinberg
   Developer account][6].
-2. [Microsoft's Visual C++][7]. This guide uses the 2008 Express version 9, as
-  was the latest at time of writing.
+2. [Microsoft's Visual C++][7]. This guide uses the 2010 Express edition, as
+  it was the latest version at time of writing.
 3. [Microsoft's Platform SDK][8]
 4. [Libpng][9] and [zlib][10] (optional)
 
@@ -55,7 +55,7 @@ must remove any other versions of VC++ on your computer.
 Next, download and install the Platform SDK, which will provide you with the
 standard header files and libraries you'll need to build software. You may
 choose to install VC++ anywhere on your hard drive, but the default location
-is `C:\Program Files\Microsoft Visual Studio 9`.
+is `C:\Program Files\Microsoft Visual Studio 10.0`.
 
 
 Creating your project
@@ -169,10 +169,9 @@ main=VSTPluginMain
 Configure build settings
 ------------------------
 
-Go to the project settings either by double clicking on the project name in
-the Property Manager or in the menu under Project -> YourProjectName
-Properties. Make the following changes to the project for all build
-configurations:
+Go to the project settings either by right clicking on the project in the
+solution explorer and then selecting "Properties". Make the following changes
+to the project for all build configurations:
 
 <ul>
 <li>General<ul>
@@ -212,15 +211,10 @@ configurations:
       complicates deployment and distribution.</li>
   </ul></li>
   <li>Precompiled Headers:<ul>
-    <li>Create/Use Precompiled Header: Not Using Precompiled Headers. Yeah,
-      this makes rebuilding a bit slower, but will avoid a bunch of weird
-      errors as you are getting your project set up.</li>
-  </ul></li>
-  <li>Browse Information:<ul>
-    <li>Enable Browse Information: None</li>
-  </ul></li>
-  <li>Advanced:<ul>
-    <li>Compile As: Default</li>
+    <li>Precompiled Header: Not Using Precompiled Headers. Yeah, this makes
+      rebuilding a bit slower, but will avoid a bunch of weird errors as you
+      are getting your project set up. Once you get the project building you
+      can revisit this step.</li>
   </ul></li>
 </ul></li>
 <li>Linker<ul>
@@ -250,14 +244,14 @@ configurations:
       <li>zlib.lib (only if you are building with a GUI)</li>
       <li>libpng.lib (only if you are building with a GUI)</li>
     </ul></li>
-    <li>Ignore Specific Library (for <b>Release</b> builds):<ul>
+    <li>Ignore Specific Default Library (for <b>Release</b> builds):<ul>
       <li>msvcrt.lib</li>
       <li>libc.lib</li>
       <li>msvcrtd.lib</li>
       <li>libcd.lib</li>
       <li>libcmtd.lib</li>
     </ul></li>
-    <li>Ignore Specific Library (for <b>Debug</b> builds):<ul>
+    <li>Ignore Specific Default Library (for <b>Debug</b> builds):<ul>
       <li>libcmt.lib</li>
       <li>libcmtd.lib</li>
       <li>msvcrt.lib</li>
