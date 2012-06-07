@@ -11,6 +11,11 @@ Audio Utilities
 * [MrsWatson Project Page](http://teragonaudio.github.com/MrsWatson)
 * [Download latest version](http://static.teragonaudio.com/MrsWatson.zip)
 
+**DJToolbox** - *Beta* A grab-bag of utilities for managing a digital music library
+
+* [DJToolbox Project Page](http://teragonaudio.github.com/DJToolbox)
+* [Download latest version](http://static.teragonaudio.com/DJToolbox.zip)
+
 **gogo-no-coda** - Mirror of the insanely fast gogo mp3 encoder
 
 * [gogo-no-coda mirror page](https://github.com/teragonaudio/gogo-no-coda)
