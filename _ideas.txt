@@ -4,3 +4,4 @@
 - Ableton live optimization
 - Warp mode tricks
 - Warping like a pro
+- Building 64-bit plugins
