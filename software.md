@@ -32,7 +32,7 @@ Effect Plug-Ins
 * [HiLoFilter project page][7]
 * [Download latest version][8]
 
-**[NotNotchFilter][17] *Beta* - Mid-range filter ideal for live mixing
+**[NotNotchFilter][17]** *Beta* - Mid-range filter ideal for live mixing
 * [NotNotchFilter project page][17]
 * [Download latest version][18]
 
