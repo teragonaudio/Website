@@ -32,6 +32,10 @@ Effect Plug-Ins
 * [HiLoFilter project page][7]
 * [Download latest version][8]
 
+**[NotNotchFilter][17] *Beta* - Mid-range filter ideal for live mixing
+* [NotNotchFilter project page][17]
+* [Download latest version][18]
+
 **[PulseDelay][9]** *Beta* - Synchronized delay effect
 
 * [PulseDelay project page][9]
@@ -73,3 +77,5 @@ Utilities
 [14]: http://homepage2.nifty.com/kei-i/
 [15]: /DJToolbox.html
 [16]: http://static.teragonaudio.com/DJToolbox.zip
+[17]: /NotNotchFilter.html
+[18]: http://static.teragonaudio.com/NotNotchFilter.zip
