@@ -50,7 +50,7 @@ Utilities
 * [MrsWatson project page][11]
 * [Download latest version][12]
 
-**[DJToolbox][15]** - *Beta* A grab-bag of utilities for managing a digital music library
+**[DJToolbox][15]** *Beta* - A grab-bag of utilities for managing a digital music library
 
 * [DJToolbox Project Page][15]
 * [Download latest version][16]
