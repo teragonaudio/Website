@@ -43,8 +43,7 @@ alone:
   possibilities.
 * Traktor's remix decks (introduced in 2.5) are quite limited compared to
   looping in Live.
-
-others??
+* Within Live you can build drum machines, samplers, etc.
 
 However, using Traktor and Live together still allows one to play warped
 tracks within Live, or to use the 3-band EQ within Traktor (for example).
