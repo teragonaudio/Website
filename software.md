@@ -50,6 +50,11 @@ Utilities
 * [MrsWatson project page][11]
 * [Download latest version][12]
 
+**[Android Screenshot][19]** - Utility for Mac OSX to take a screenshot from an Android device.
+
+* [Android Screenshot project page][19]
+* [Download latest version][20]
+
 **[DJToolbox][15]** *Beta* - A grab-bag of utilities for managing a digital music library
 
 * [DJToolbox Project Page][15]
@@ -79,3 +84,5 @@ Utilities
 [16]: http://static.teragonaudio.com/DJToolbox.zip
 [17]: /NotNotchFilter.html
 [18]: http://static.teragonaudio.com/NotNotchFilter.zip
+[19]: https://github.com/nikreiman/AndroidScreenshot
+[20]: http://static.teragonaudio.com/AndroidScreenshot.zip
