@@ -16,8 +16,8 @@ nonetheless there are a few "gotchas" along the way.
 
 This guide assumes familiarity with Xcode and C++ development, and that you
 are working with Mac OSX 10.5/10.6 and have a relatively recent version of
-Xcode (4.2 or better). This guide only covers building VST 2.x plugins, as the
-3.x SDK is not widely supported yet.
+Xcode (4.2 or better). This guide only covers *building VST 2.x plugins*, as
+the 3.x SDK is not widely supported yet.
 
 Also, before you start, you will obviously need the VST SDK, which can be
 acquired [from Steinberg's Development
