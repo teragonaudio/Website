@@ -25,7 +25,7 @@ VST plugins in other languages (such as [C#][1], [Java][2], [Ruby][3] and
 This tutorial will walk you through the process of installing and configuring
 the tools you'll need to build your own VST plugins with Visual Studio, and
 creating a simple VST plugin with optional support for a VSTGUI frontend. This
-guide only covers building VST 2.x plugins, as the 3.x SDK is not very widely
+guide only covers *building VST 2.x plugins*, as the 3.x SDK is not very widely
 supported yet.
 
 *Note*: This guide was written for Visual Studio 2008, but I'm in the process
