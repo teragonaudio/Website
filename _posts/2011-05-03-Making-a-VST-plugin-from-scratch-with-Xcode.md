@@ -9,19 +9,19 @@ alias: /2010/06/making-vst-plugin-from-scratch-with.html
 Introduction
 ------------
 
-After writing up my Visual Studio VST guide, I figured that the Mac
-programmers out there might enjoy a simpler tutorial. Fortunately the process
-of developing VST plugins under OSX is much simpler than under Windows, but
-nonetheless there are a few "gotchas" along the way.
+Developing VST plugins under Mac OSX is in many ways simpler than other
+platforms, but nonetheless there are a few "gotchas" along the way.
 
 This guide assumes familiarity with Xcode and C++ development, and that you
-are working with Mac OSX 10.5/10.6 and have a relatively recent version of
-Xcode (4.2 or better). This guide only covers *building VST 2.x plugins*, as
-the 3.x SDK is not widely supported yet.
+are working with Mac OSX 10.5 or greater and have a relatively recent version
+of Xcode (4.2 or better). This guide only covers *building VST 2.x plugins*,
+as the VST3 SDK is not widely supported yet.
 
 Also, before you start, you will obviously need the VST SDK, which can be
 acquired [from Steinberg's Development
-Portal](http://www.steinberg.net/en/company/3rd_party_developer.html).
+Portal](http://www.steinberg.net/en/company/3rd_party_developer.html). Note
+that Steinberg's website is a bit confusing and does not label the downloads
+clearly, so make sure that you get the right version of the SDK.
 
 
 Creating your project
@@ -78,7 +78,7 @@ Unless you have very specific requirements, I highly recommend building your
 plugin as a standard 32-bit Intel binary. My reasoning for this is as follows:
 
 - Although 64-bit Macs are widespread, there are not so many 64-bit compatible
-  plugin hosts.
+  plugin hosts, though this is slowly changing.
 - Likewise, building 64-bit VST's is sometimes a bit difficult, as Apple is 
   deprecating Carbon, which is 32-bit only.
 - The number of PPC users out there is not so many anymore, so building a
