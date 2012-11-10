@@ -325,6 +325,11 @@ The path must be relative to the location of the project file. Then, in
 Now you can use `IDB_BITMAP1` (or any other name of your choosing) in your
 code when creating new CBitmap objects.
 
+I have heard some reports of `vstgui.cpp` not compiling properly due to the
+missing symbol `png_set_expand_gray_1_2_4_to_8`. Changing
+`png_set_gray_1_2_4_to_8` to `png_set_expand_gray_1_2_4_to_8` in `vstgui.cpp`
+seems to fix this issue.
+
 
 Final considerations
 --------------------
