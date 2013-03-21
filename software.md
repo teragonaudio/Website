@@ -8,7 +8,6 @@ Instrument Plug-Ins
 -------------------
 
 **[KickMaker][1]** - A synthesizer specifically to create kick drum sounds
-
 * [KickMaker project page][1]
 * [Download latest version][2]
 
@@ -17,18 +16,15 @@ Effect Plug-Ins
 ---------------
 
 **[BeatCounter][3]** - Detect tempo in BPM for a track
-
 * [BeatCounter project page][3]
 * [Download latest version][4]
 
 
 **[AUNotes][5]** - Save text notes in your arrangement
-
 * [AUNotes project page][5]
 * [Download latest version][6]
 
 **[HiLoFilter][7]** - Dual Hi/Lo pass filter, similar to those found in Pioneer DJM mixers
-
 * [HiLoFilter project page][7]
 * [Download latest version][8]
 
@@ -36,8 +32,11 @@ Effect Plug-Ins
 * [NotNotchFilter project page][17]
 * [Download latest version][18]
 
-**[PulseDelay][9]** *Beta* - Synchronized delay effect
+**[ChaosChimp][21]** *Beta* - Prepare for onstage disasters in the safety of your own studio
+* [ChaosChimp project page][21]
+* [Download latest version][22]
 
+**[PulseDelay][9]** *Beta* - Synchronized delay effect
 * [PulseDelay project page][9]
 * [Download latest version][10]
 
@@ -46,22 +45,18 @@ Utilities
 ---------
 
 **[MrsWatson][11]** - A command-line VST plugin host
-
 * [MrsWatson project page][11]
 * [Download latest version][12]
 
 **[Android Screenshot][19]** - Utility for Mac OSX to take a screenshot from an Android device.
-
 * [Android Screenshot project page][19]
 * [Download latest version][20]
 
 **[DJToolbox][15]** *Beta* - A grab-bag of utilities for managing a digital music library
-
 * [DJToolbox Project Page][15]
 * [Download latest version][16]
 
 **[gogo-no-coda][13]** *Mirror* - Mirror of the insanely fast gogo mp3 encoder
-
 * [gogo-no-coda project page][13]
 * [Original page][14] (in Japanese, possibly not working)
 
@@ -86,3 +81,5 @@ Utilities
 [18]: http://static.teragonaudio.com/NotNotchFilter.zip
 [19]: https://github.com/nikreiman/AndroidScreenshot
 [20]: http://static.teragonaudio.com/AndroidScreenshot.zip
+[21]: /ChaosChimp.html
+[22]: http://static.teragonaudio.com/ChaosChimp.zip
