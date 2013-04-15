@@ -3,7 +3,6 @@ layout: default
 title: Building AudioUnits with modern Mac OSX
 category: development
 tags: [ AudioUnits ]
-published: false
 ---
 
 Introduction
@@ -93,4 +92,4 @@ Another annoyance is that Apple has removed the project templates for making
 AudioUnit projects.
 
 
-1: https://developer.apple.com/downloads/index.action
+[1]: https://developer.apple.com/downloads/index.action
