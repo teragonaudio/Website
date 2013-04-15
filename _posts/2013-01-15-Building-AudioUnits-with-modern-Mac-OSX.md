@@ -89,7 +89,11 @@ Making a new AudioUnit
 ----------------------
 
 Another annoyance is that Apple has removed the project templates for making
-AudioUnit projects.
+AudioUnit projects. I'm in the process of updating my [plugin templates][2],
+but [Mojo Lama has also blogged about how to restore the missing
+templates][3].
 
 
 [1]: https://developer.apple.com/downloads/index.action
+[2]: https://github.com/teragonaudio/XcodeVstTemplates
+[3]: http://www.mojolama.com/restore-apples-audio-unit-templates
