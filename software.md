@@ -48,6 +48,9 @@ Utilities
 * [MrsWatson project page][11]
 * [Download latest version][12]
 
+**[PluginParameters][23]** - Basic parameter engine suitable for VST and AU audio plugins
+* [PluginParameters project page][24]
+
 **[Android Screenshot][19]** - Utility for Mac OSX to take a screenshot from an Android device.
 * [Android Screenshot project page][19]
 * [Download latest version][20]
@@ -83,3 +86,5 @@ Utilities
 [20]: http://static.teragonaudio.com/AndroidScreenshot.zip
 [21]: /ChaosChimp.html
 [22]: http://static.teragonaudio.com/ChaosChimp.zip
+[23]: /PluginParameters.html
+[24]: https://github.com/teragonaudio/PluginParameters
