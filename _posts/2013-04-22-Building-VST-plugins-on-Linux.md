@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Building VST plugins on Linux
-category: Development
+category: development
 tags: [ VST, Linux ]
 ---
 
