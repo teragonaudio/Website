@@ -92,8 +92,6 @@ alongside clip automation envelopes, such as clip volume level and panning. To
 clear the envelope, select the given CC and then right click anywhere in the
 clip data and select clear automation envelope.
 
-[image]
-
 Another solution is to use a "panic" clip to clear out any automation data. I
 have [created a MIDI clip which will turn off all CC automations by setting
 them all to 0][3]. Simply drag this clip into your set, turn of looping for
@@ -119,6 +117,6 @@ And for more dramatic effects, usually ones you'd want to control with a knob:
 
 [1]: http://www.plogue.com/products/chipsounds/
 [2]: http://www.syntax-error.se/
-[3]: MAKEIT
-[4]: SAVEIT
+[3]: http://static.teragonaudio.com/chipsounds-on-live-panic.midi
+[4]: http://static.teragonaudio.com/chipsounds-on-live-chipfx.adg
 [5]: http://4live.me/tagged/oneknob#.UX4qcKDmpIM
