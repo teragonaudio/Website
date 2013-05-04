@@ -25,16 +25,32 @@ its own pitfalls:
   especially with a large tempo range.
 * Using a fader. Impractical, since I need my faders for other mappings.
 
-To use buttons, first program your MIDI controller to have the two buttons send
-out the same MIDI CC message. Then, map one of the buttons to the tempo by
-entering Live's mapping mode, clicking on the tempo box, and then pressing the
-button. Finally, program your MIDI controller such that the increase button
-always sends 1 sends as its value, and the decrease button always sends 127.
-Now, when you press a button, the tempo will increase/decrease by a small
-amount (usually ~.75 BPM, though it varies on your tempo range).
+In my opinion, *buttons* are the best way to control tempo with MIDI, ideally
+one button to increase the tempo a little bit and another one to decrease it.
+Live actually supports this, but it's not completely obvious how to set it up.
 
-This may seem a bit counter-intuitive due to the 1/127 values, but at least
-it's documented. See the Ableton manual's section on "Mapping to Relative MIDI
-Controllers" for the full scoop. This means, btw, that you can also use the
-button trick to increase or decrease other controls as well, not just tempo.
+First, you need to reprogram your MIDI controller to have two buttons send the
+same MIDI CC message. One button will _decrease_ the tempo by sending the
+value 65, and another one will _increase_ it by sending 1. The exact variation
+in the tempo that these buttons will send varies on the tempo range (visible
+in the MIDI mapping table), and the values that you send. Sending 65/1 will
+alter the tempo in the smallest possible amount. To alter the tempo with the
+largest possible amount, have your controller send 127/64 instead.
+
+Now, enter MIDI mapping mode in Live and press one of the two buttons (doesn't
+matter which one) to assign this CC to the tempo. Now click on the tempo
+control again after assigning it, and then at the bottom of the screen change
+the mode to "Relative (Signed Bit)".
+
+![Changing the control's mode](http://static.teragonaudio.com/ableton-live-control-tempo-midi.png)
+
+The MIDI buttons should now increase and decrease the tempo. Hooray! This
+trick is a bit non-intuitive, but it is actually documented in Live's manual
+in a section titled "Mapping to Relative MIDI Controllers". The table in this
+section also explains why sending 65/1 varies the tempo in smaller steps than
+sending 127/64, since these values are at the minimum/maximum extremes for the
+mapping ranges that Live recognizes.
+
+This trick also means that any ranged control (ie, volume, a send knob, etc)
+can also be controlled with buttons in a similar fashion.
 
