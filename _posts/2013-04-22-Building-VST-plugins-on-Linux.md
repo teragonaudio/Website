@@ -23,7 +23,7 @@ etc), as well as `audioeffect.cpp`, `audioeffectx.cpp`, and `vstplugmain.cpp`.
 Once you have built all object files, they must be linked together to create
 a single shared library:
 
-`gcc -shared -Wl=soname,myplugin.so -o myplugin.so *.o`
+`g++ -shared -Wl=soname,myplugin.so -o myplugin.so *.o`
 
 That's it! Now you should have a VST plugin usable on Linux.
 
