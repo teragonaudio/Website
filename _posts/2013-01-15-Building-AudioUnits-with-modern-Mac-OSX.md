@@ -84,6 +84,22 @@ both. In addition to the fix above, you'll also need to edit
 
 {% endhighlight %}
 
+Additionally, you may need to patch CADebugMacros.h if you want to use C++11
+features in your code. The offending line is 138, and should be changed to:
+
+{% highlight cpp %}
+
+    #define DebugMessage(msg) DebugPrintfRtn(DebugPrintfFileComma "%s" DebugPrintfLineEnding, msg) FlushRtn
+
+{% endhighlight %}
+
+Amusingly enough, Xcode does have a quick fix for this problem and will offer
+to insert a space after the "%s", however it will always fail in doing so
+because it is not able to unlock the file for writing in spite of asking you
+if you would like to unlock the file. Oh well, it doesn't really matter
+because you'll probably already need o terminal window open with sudo + vim to
+do the rest of the above patching.
+
 
 Making a new AudioUnit
 ----------------------
