@@ -42,7 +42,7 @@ from February 2012. The later versions *do not contain the actual SDK source
 code*. Mount the DMG, and then pop open a terminal window and run the
 following command:
 
-`sudo cp -r -v "/Volumes/Audio Tools/CoreAudio" /Applications/Xcode.app/Contents/Developer/Extras`
+`sudo cp -r -v "/Volumes/Audio Tools/CoreAudio" /Applications/Xcode.app/Contents/Developer/Extras/CoreAudio`
 
 And then:
 
