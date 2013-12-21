@@ -46,16 +46,16 @@ following command:
 
 And then:
 
-`sudo sudo find /Applications/Xcode.app/Contents/Developer/Extras/CoreAudio -type f -exec chmod 666 {} \;`
+`sudo find /Applications/Xcode.app/Contents/Developer/Extras/CoreAudio -type f -exec chmod 666 {} \;`
 
 
 Patching the AudioUnit SDK
 --------------------------
 
-Stupidly enough, the AudioUnit SDK does *not* compile out of the box with
-Xcode 4.5. You will need to alter some of the source code manually in order to
-get things working again. You'll need to edit `AUMIDIEffectBase.cpp` at line
-154 to:
+As of Mac OS X 10.7 and above the AudioUnit SDK does *not* compile out of the
+box with Xcode 4.5. You will need to alter some of the source code manually in
+order to get things working again. You'll need to edit `AUMIDIEffectBase.cpp`
+at line 154 to:
 
 {% highlight cpp %}
 
