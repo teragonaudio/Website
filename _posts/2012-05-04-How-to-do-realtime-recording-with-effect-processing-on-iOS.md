@@ -21,6 +21,28 @@ out how to put all the pieces together. So without further ado, let's get
 started.
 
 
+WAIT A SECOND -- BEFORE YOU READ ANY FURTHER
+--------------------------------------------
+
+Yes, this blog post is going to tell you how to do real-time audio processing
+on iOS, the hard and old-fashioned way. So before we get started with the
+dirty details, it's worth asking yourself if you really, really need to do
+things the hard way.
+
+![Which path do you really want to choose?](http://static.teragonaudio.com/road-to-heaven-or-hell.jpg)
+
+There is actually an easier way to do all of this, and it's a framework called
+[novocaine][1]. The framework name says it all; it provides a painless way of
+doing something otherwise would be very painful. And believe me, doing these
+low level audio operations on iOS can be quite painful. This framework
+provides a easy way to do audio processing on iOS, giving the programmer a
+simple block-based callback which contains the DSP code.
+
+Before you continue reading this article, please, check out novacaine's GitHub
+page. If that framework doesn't meet your needs, then feel free to continue
+reading and doing things the hard way.
+
+
 How iOS buffers audio
 ---------------------
 
@@ -403,3 +425,6 @@ the code (preferably written in very vanilla C) and drop it into the iOS
 AudioUnit as described above.
 
 Happy coding!
+
+
+[1]: https://github.com/alexbw/novocaine
