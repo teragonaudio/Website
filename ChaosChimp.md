@@ -52,5 +52,15 @@ Obviously, ChaosChimp is not intended to be used when performing. But more
 bonus points to the ballsy DJ's who do.
 
 
-[1]: http://techblog.netflix.com/2010/12/5-lessons-weve-learned-using-aws.html
 
+
+
+- - -
+
+Changelog:
+
+Version 0.9.0:
+(No comment)
+
+
+[1]: http://techblog.netflix.com/2010/12/5-lessons-weve-learned-using-aws.html

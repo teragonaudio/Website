@@ -115,6 +115,26 @@ running OSX 10.6.8. The test was performed with Ableton Live 8.3 with a buffer
 size of 512. Your results may vary.
 
 
+
+
+
+
+
+- - -
+
+Changelog:
+
+Version 1.0.2:
+<ul><li> Parameters are correctly saved/restored</li></ul>
+
+Version 1.0.1:
+- Add windows build
+- Improve documentation
+
+Version 1.0.0:
+(No comment)
+
+
 [1]: http://arcticanaudio.com/effects/thepilgrim.html
 [2]: http://teragonaudio.com
 [3]: http://rawmaterialsoftware.com/juce

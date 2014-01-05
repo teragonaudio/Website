@@ -46,3 +46,12 @@ Suggestions?
 DJToolbox is a work in progress and should be considered beta quality. If you
 have an idea for a tool which should be included in the software, contact
 support (at) teragonaudio (dot) com.
+
+- - -
+
+Changelog:
+
+Version 0.9:
+(No comment)
+
+

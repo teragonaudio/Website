@@ -4,8 +4,8 @@ title: KickMaker
 alias: /p/KickMaker.html
 ---
 
-KickMaker
-=========
+About KickMaker
+===============
 
 KickMaker is a synthesizer designed specifically to create good kick drum
 sounds. It uses four independent oscillators and a wide range of effects,
@@ -28,4 +28,13 @@ LICENSE.txt file. Due to licensing restrictions, the VST SDK is not
 distributed with the source code of this plugin. If you want to build
 KickMaker by hand, then you must download it here:
 
-http://www.steinberg.net/en/company/3rd_party_developer.html
+  http://www.steinberg.net/en/company/3rd_party_developer.html
+
+- - -
+
+Changelog:
+
+Version 2.0:
+- Bugfixes
+
+

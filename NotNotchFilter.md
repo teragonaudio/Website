@@ -34,3 +34,23 @@ Licensing
 
 NotNotchFilter is licensed under the BSD License, which is found in the
 LICENSE.txt file included in the source code.
+
+- - -
+
+Changelog:
+
+Version 1.0.1:
+<ul><li> Parameters saved/restored correctly</li></ul>
+
+Version 1.0.0:
+- First stable public release
+- Add Windows build
+
+Version 0.9.1:
+- Tweak parameter ranges to make filter more friendly for DJ'ing
+- Cut from base frequency up, not both directions
+
+Version 0.9:
+(No comment)
+
+

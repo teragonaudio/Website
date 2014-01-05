@@ -7,44 +7,14 @@ alias: /p/MrsWatson.html
 MrsWatson
 =========
 
-MrsWatson is a command-line audio plugin host. It takes one or more plugins,
-sends an audio signal to them for processing, and saves the resulting output.
-Although the plugins think they are running in realtime, processing is
-actually done offline (this is not the same as the "offline" processing in VST
-terminology). This makes MrsWatson ideal for developing or debugging plugins,
-or processing audio on a server.
+MrsWatson is a command-line audio plugin host. It takes an audio and/or MIDI
+file as input, and processes it through one or more audio plugins. Currently
+MrsWatson only supports VST 2.x plugins, but more formats are planned in the
+future. MrsWatson was designed for primarily three purposes:
 
-
-History
--------
-
-MrsWatson takes its name from a prior product from [Teragon Audio][1] called
-*MissWatson* (and the original name there, in case you were wondering, is a
-bit of a joke on the [Dr. Watson][2] utility).
-
-In 2009 I sold the exclusive rights to MissWatson to a company interested in
-using it for server-side audio processing. As per the terms of our agreement,
-I made one last public release, and removed the code from my website. Since
-then, I have received numerous emails and inquiries regarding the project,
-mostly from plugin developers or people interested in VST technology. Though I
-have no regrets about discontinuing the original MissWatson (particularly
-since I didn't have time to properly maintain it), I felt that it was a useful
-utility which should be made available and open-sourced.
-
-In 2011, my NDA with the aforementioned company expired, and I started working
-on a new MissWatson. MrsWatson is the result of this labor.
-
-As I no longer have the source code for MissWatson, MrsWatson is a black-box
-implementation. They share only the name and concept in common. The two
-programs are **incompatible** and have **fundamentally different behavior**.
-They are also written in different languages (the original in C++, MrsWatson
-in C), and have completely different internal architecture.
-
-If you have built some system which used the original MissWatson, then you
-will likely have to make some big changes to migrate to MrsWatson. Likewise,
-if you were using some of the original MissWatson code in your project, you
-will *not* be able to replace it with MrsWatson without significant work on
-your end.
+* Audio plugin development and testing
+* Automated audio processing for servers or other applications
+* Unit testing audio plugins
 
 
 Examples
@@ -129,45 +99,71 @@ be added soon. If you see some other missing functionality or experience a
 crash or other bug, please report an issue on the [project page][3].
 
 
+Bug Reporting
+-------------
+
+If you believe you have found a bug in MrsWatson, please try first running it
+with the `--verbose` argument. This will generate extra logging output which
+may help to solve the problem.
+
+The easiest way to report a bug is to send an email to Teragon Audio's support
+address: support (at) teragonaudio (dot) com. MrsWatson has a special
+command-line switch to aid in diagnosing runtime problems, `--error-report`.
+When enabled it will create a zipfile on the desktop containing the input,
+output, logs, and optionally the plugins themselves. Please include these
+reports for bugs resulting in incorrect behavior or crashes.
+
+A test suite program, named `mrswatsontest`, can be found in the Mrswatson 
+zipfile. If tests fail on your platform, please report this along with your
+bug.
+
+MrsWatson uses [GitHub issues][4] for bug reporting, if you would like to
+submit an issue yourself.
+
+
 Building
 --------
 
-MrsWatson can be built either from the command line or with a few popular IDE's.
-For the command line builds, you will need the following:
-
-* A relatively recent automake
-* A relatively recent autoconf
-* Mingw (on Windows)
-
-On Windows, MrsWatson can also be built with Visual Studio, which is preferred
-as this offers better performance. After cloning the source code, run the
-`setup-build.sh` script, then `./configure` and `make` as usual. Please report
-any build problems on the [project page][3].
-
-As MrsWatson is a 32-bit executable, which is needed to support 32-bit plugins
-(of which are the vast majority in the plugin world), you may also need some
-32-bit compatibility libraries installed on your system. On linux, you may
-need to install the following packages to build MrsWatson from source:
-
-* gcc-multilib
-* ia32-libs
-* libc6-dev:i386
-
-Alternately, MrsWatson can be built with a few popular IDE's. Build files are
-included in the `projects` directory under the project sources root.
-Distribution builds of MrsWatson are always made with `make`, except for on
-Windows.
+Instructions for building MrsWatson can be found in the file
+[Building.txt][9].
 
 
-Please Help!
-------------
+History and Name
+----------------
 
-As mentioned, MrsWatson is fully functional but needs a lot of polish. If you
-find areas of the code which are incomplete or not compatible with some
-plugins, please make a pull request.
+MrsWatson takes its name from a prior product from [Teragon Audio][1] called
+*MissWatson* (and the original name there, in case you were wondering, is a
+bit of a joke on the [Dr. Watson][2] utility).
 
-Likewise, if you want to help out without programming, the best way to do so
-is to test and report any problems with given plugins or platforms.
+In 2009 I sold the exclusive rights to MissWatson to a company interested in
+using it for server-side audio processing. As per the terms of our agreement,
+I made one last public release, and removed the code from my website. Since
+then, I have received numerous emails and inquiries regarding the project,
+mostly from plugin developers or people interested in VST technology. Though I
+have no regrets about discontinuing the original MissWatson (particularly
+since I didn't have time to properly maintain it), I felt that it was a useful
+utility which should be made available and open-sourced.
+
+In 2011, my NDA with the aforementioned company expired, and I started working
+on a new MissWatson. MrsWatson is the result of this labor.
+
+As I no longer have the source code for MissWatson, MrsWatson is a black-box
+implementation. They share only the name and concept in common. The two
+programs are **incompatible** and have **fundamentally different behavior**.
+They are also written in different languages (the original in C++, MrsWatson
+in C), and have completely different internal architecture.
+
+But just as wildfires usher in new growth, the rewrite of MissWatson to
+MrsWatson has had some advantages as well. Benchmarking the old application
+against the new one shows that the rewrite performs over twice as fast as the
+previous version! Additionally, the new version is much more portable, easier
+to maintain, and extensible than its predecessor.
+
+If you have built some system which used the original MissWatson, then you
+will likely have to make some big changes to migrate to MrsWatson. Likewise,
+if you were using some of the original MissWatson code in your project, you
+will *not* be able to replace it with MrsWatson without significant work on
+your end. Migration to the new MrsWatson is strongly encouraged.
 
 
 Donate
@@ -178,11 +174,10 @@ project! If you appreciate MrsWatson and would like to donate money, please
 instead make a donation to a charity on our behalf, and let us know about it.
 The organizations which have helped us the most are:
 
-* [EFF](https://supporters.eff.org/donate): Without the EFF, programs like
-  MrsWatson would be significantly harder to create and distribute.
-* [Wikipedia](http://wikimediafoundation.org/wiki/WMFJA085/en): Writing
-  MrsWatson involves a lot of research as well as coding, and Wikipedia is
-  an essential part of this.
+* [EFF][5]: Without the EFF, programs like MrsWatson would be significantly
+  harder to create and distribute.
+* [Wikipedia][6]: Writing MrsWatson involves a lot of research as well as
+  coding, and Wikipedia is an essential part of this.
 
 
 Special Thanks
@@ -190,25 +185,102 @@ Special Thanks
 
 Big additional thanks to:
 
-* Andrew McCrea (@thrusong)
+* Andrew McCrea, (@thrusong)
+* Michael Pruett, (@mpruett)
 
 
 Licensing
 ---------
 
 MrsWatson is made available under the BSD license. For more details, see the
-`LICENSE` file distributed with the source code. MrsWatson also uses the
+`LICENSE.txt` file distributed with the source code. MrsWatson also uses the
 following third-party libraries, which are licensed under the respective
 agreements:
 
-* [VST](http://www.steinberg.net/en/company/developer.html): Licensed under
-  Steinberg's VST SDK license agreement, version 2.4. For more information,
-  see Steinberg's developer portal.
-* [LibAiff](http://aifftools.sourceforge.net/libaiff/): Written by Marco
-  Trillo, made under the BSD license. For more details, see the LICENSE file
-  in the LibAiff source code.
+* [VST][7]: Licensed under Steinberg's VST SDK license agreement, version 2.4.
+  For more information, see Steinberg's developer portal.
+* [libaudiofile][8]: Written by Michael Pruett, licensed under GNU Library
+  General Public License.
+
+
+
+
+
+
+
+
+
+
+
+- - -
+
+Changelog:
+
+Version 0.9.6:
+- Compatibility with VST shell plugins (including Waves plugins)
+- Compatibility fixes with plugins that declare more than 2 outputs
+  (including Independence)
+- Compatibility fixes for Chainer and other plugins which rely on VstEvents*
+  struct to remain in memory during processReplacing()
+- MrsWatson now sends correct musical time in PPQ/Bars when asked by plugin
+- Add 64-bit binaries to distribution zipfile (experimental)
+- Fix tons of memory leaks; test suite now runs with 0 bytes leaked
+- Fix several memory corruption bugs, valgrind now runs test suite with no
+  errors
+- Windows build migrated to cmake
+- Several other bugfixes and small improvements
+
+Version 0.9.5:
+- Better support for MIDI meta events. Tempo and time signature are now
+  correctly read from MIDI files.
+- Fix a bug where MrsWatson would not know when to stop processing an
+  instrument plugin chain.
+- Fix a bug where some monophonic VSTi's would not receive notes data in an
+  expected format.
+- Fix some memory corruption bugs.
+- Improved application test suite.
+
+Version 0.9.4:
+- Fix several heap corruption bugs
+- Fix build on linux
+- Organizing code into packages
+- Various small bugfixes
+- Improve test coverage
+
+Version 0.9.3:
+- Introduce CMake as build system for unix platforms (Linux & Mac OSX)
+- Several crash fixes reported by users
+- Ability to generate diagnostic error reports
+- Improved logging
+- Improved test coverage
+- More accurate time recording on all platforms
+- Other small improvements
+- FXP presets with chunks now supported
+
+Version 0.9.2:
+- Using Visual Studio to build on Windows
+- Introduced test suite, though test coverage is current small
+- Experimental native support for writing WAVE data (only active
+  for the Windows build right now).
+- Update to audiofile 0.3.4
+- Fix a number of Windows bugs
+- Improved log formatting
+- Can send time in PPQ
+- Command line option for manually setting MIDI time division
+
+Version 0.9.1:
+<ul><li> Switching from libaiff to audiofile (provides WAV support)</li></ul>
+
+Version 0.9.0:
+(No comment)
 
 
 [1]: http://www.teragonaudio.com
 [2]: http://en.wikipedia.org/wiki/Dr._Watson_(debugger)
 [3]: http://github.com/teragonaudio/MrsWatson
+[4]: https://github.com/teragonaudio/MrsWatson/issues
+[5]: https://supporters.eff.org/donate
+[6]: http://wikimediafoundation.org/wiki/WMFJA085/en
+[7]: http://www.steinberg.net/en/company/developer.html
+[8]: http://audiofile.68k.org/
+[9]: https://github.com/teragonaudio/MrsWatson/blob/master/doc/Building.md
