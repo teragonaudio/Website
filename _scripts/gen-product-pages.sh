@@ -10,7 +10,7 @@ function appendChangelog() {
     sort="gsort"
   fi
 
-  printf "\n---\nChangelog:\n" >> "$outputFile"
+  printf "\n- - -\n\nChangelog:\n" >> "$outputFile"
   (
     cd "$productDir"
     for i in $(git tag --list | $sort --version-sort --reverse) ; do
@@ -20,10 +20,19 @@ function appendChangelog() {
       if [ $? -ne 0 ] ; then
         printf "%s Bugfixes\n" "$dash" # Heh
       else
-        git tag --verify $i | tail +7
+        local numLines=$(git tag --verify $i | tail +7 | wc -l)
+        if [ $numLines -eq 0 ] ; then
+          printf "(No comment)\n"
+        elif [ $numLines -eq 1 ] ; then
+          local line=$(git tag --verify $i | tail +7 | cut -d '-' -f 2-)
+          printf "<ul><li>%s</li></ul>\n" "$line"
+        else
+          git tag --verify $i | tail +7
+        fi
       fi
     done
   ) >> "$outputFile"
+  printf "\n\n" >> "$outputFile"
 }
 
 function generateProductPage() {
@@ -34,8 +43,9 @@ function generateProductPage() {
     local outputFile="${productName}.md"
     echo "Generating product page for $productName"
     printf "%s\nlayout: product\ntitle: %s\nalias: /p/%s.html\n%s\n\n" "$dashes" "$productName" "$productName" "$dashes" > "$outputFile"
-    cat "$productDir/README.md" >> "$outputFile"
+    cat "$productDir/README.md" | sed -e 's/```c++/\{% highlight cpp %\}/' | sed -e 's/```/\{% endhighlight %\}/' | sed -e 's/^\[[0-9]*\]:.*$//' >> "$outputFile"
     appendChangelog "$productDir" "$outputFile"
+    cat "$productDir/README.md" | grep -e '^\[[0-9]*\]:.*$' >> "$outputFile"
   fi
 }
 
