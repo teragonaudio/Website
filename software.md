@@ -19,9 +19,8 @@ Effect Plug-Ins
 * [BeatCounter project page][3]
 * [Download latest version][4]
 
-
-**[AUNotes][5]** - Save text notes in your arrangement
-* [AUNotes project page][5]
+**[ExtraNotes][5]** - Save text notes in your arrangement
+* [ExtraNotes project page][5]
 * [Download latest version][6]
 
 **[HiLoFilter][7]** - Dual Hi/Lo pass filter, similar to those found in Pioneer DJM mixers
@@ -32,13 +31,9 @@ Effect Plug-Ins
 * [NotNotchFilter project page][17]
 * [Download latest version][18]
 
-**[ChaosChimp][21]** *Beta* - Prepare for onstage disasters in the safety of your own studio
+**[ChaosChimp][21]** - Prepare for onstage disasters in the safety of your own studio
 * [ChaosChimp project page][21]
 * [Download latest version][22]
-
-**[PulseDelay][9]** *Beta* - Synchronized delay effect
-* [PulseDelay project page][9]
-* [Download latest version][10]
 
 
 Utilities
@@ -51,13 +46,12 @@ Utilities
 **[PluginParameters][23]** - Basic parameter engine suitable for VST and AU audio plugins
 * [PluginParameters project page][24]
 
+**[TeragonGuiComponents][25]** - GUI widgets and graphics used to generate plugins
+* [TeragonGuiComponents project page][26]
+
 **[Android Screenshot][19]** - Utility for Mac OSX to take a screenshot from an Android device.
 * [Android Screenshot project page][19]
 * [Download latest version][20]
-
-**[DJToolbox][15]** *Beta* - A grab-bag of utilities for managing a digital music library
-* [DJToolbox Project Page][15]
-* [Download latest version][16]
 
 **[gogo-no-coda][13]** *Mirror* - Mirror of the insanely fast gogo mp3 encoder
 * [gogo-no-coda project page][13]
@@ -68,8 +62,8 @@ Utilities
 [2]: http://static.teragonaudio.com/KickMaker.zip
 [3]: /BeatCounter.html
 [4]: http://static.teragonaudio.com/BeatCounter.zip
-[5]: /AUNotes.html
-[6]: http://static.teragonaudio.com/AUNotes.zip
+[5]: /ExtraNotes.html
+[6]: http://static.teragonaudio.com/ExtraNotes.zip
 [7]: /HiLoFilter.html
 [8]: http://static.teragonaudio.com/HiLoFilter.zip
 [9]: /PulseDelay.html
@@ -88,3 +82,5 @@ Utilities
 [22]: http://static.teragonaudio.com/ChaosChimp.zip
 [23]: /PluginParameters.html
 [24]: https://github.com/teragonaudio/PluginParameters
+[25]: /TeragonGuiComponents.html
+[26]: https://github.com/teragonaudio/TeragonGuiComponents
