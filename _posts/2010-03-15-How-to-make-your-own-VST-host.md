@@ -225,7 +225,7 @@ and you can now establish the plugin dispatcher callbacks:
 
 {% highlight cpp %}
 
-int initPlugin(AEffect *plugin) {
+int configurePluginCallbacks(AEffect *plugin) {
   // Check plugin's magic number
   // If incorrect, then the file either was not loaded properly, is not a
   // real VST plugin, or is otherwise corrupt.
@@ -256,7 +256,7 @@ through the dispatcher handle created in the previous step:
 
 {% highlight cpp %}
 
-void initPlugin(AEffect *plugin) {
+void startPlugin(AEffect *plugin) {
   dispatcher(plugin, effOpen, 0, 0, NULL, 0.0f);
 
   // Set some default properties
@@ -357,12 +357,31 @@ plugin process some audio:
 
 {% highlight cpp %}
 
+void initializeIO() {
+  // inputs and outputs are assumed to be float** and are declared elsewhere,
+  // most likely the are fields owned by this class. numChannels and blocksize
+  // are also fields, both should be size_t (or unsigned int, if you prefer).
+  inputs = (float**)malloc(sizeof(float**) * numChannels);
+  outputs = (float**)malloc(sizeof(float**) * numChannels);
+  for(int channel = 0; channel < numChannels; channel++) {
+    inputs[i] = (float*)malloc(sizeof(float*) * blocksize);
+    outputs[i] = (float*)malloc(sizeof(float*) * blocksize);
+  }
+}
+
 void processAudio(AEffect *plugin, float **inputs, float **outputs,
   long numFrames) {
+  // Always reset the output array before processing.
+  silenceChannel(outputs, numChannels, numFrames);
+
   // Note: If you are processing an instrument, you should probably zero
   // out the input channels first to avoid any accidental noise. If you
   // are processing an effect, you should probably zero the values in the
   // output channels. See the silenceChannel() function below.
+  // However, if you are reading input data from file (or elsewhere), this
+  // step is not necessary.
+  silenceChannel(inputs, numChannels, numFrames);
+
   plugin->processReplacing(plugin, inputs, outputs, numFrames);
 }
 
@@ -376,13 +395,15 @@ void silenceChannel(float **channelData, int numChannels, long numFrames) {
 
 {% endhighlight %}
 
-Note that you need to properly allocate the arrays for the audio inputs and
-outputs depending on your blocksize and channel count. Like a regular VST
-plugin, this structure is simply a de-interlaced array ordered by channel of
-the sample block data, with the left channel being the first one. You should
-also take care to properly initialize the data in both the inputs and outputs
-array to zero, or else you can get static or other random noise in the
-processed signal.
+In the above code, there is an `inputs` and `outputs` array which should be
+initialized by your application as soon you have calculated the desired
+channel count and buffer size. You should not allocate the `inputs` and
+`outputs` arrays in the `processAudio()` function, as doing so may severely
+impact performance. Hence, the call to `initializeIO()` should be made as soon
+as possible and before the first call to `processAudio()`. You should also
+take care to properly initialize the data in both the inputs and outputs array
+to zero, or else you can get static or other random noise in the processed
+signal.
 
 
 Sending MIDI messages
