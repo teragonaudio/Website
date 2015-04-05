@@ -28,6 +28,9 @@ AudioUnit possible. Preferably, you already have some AudioUnit source code
 which you are merely trying to build it after updating to OSX 10.7/8. At any
 rate, this guide was written for OSX 10.8.2 and Xcode 4.5.2.
 
+Also, some of the problems addressed in this article have been fixed by others;
+please see the [Lecagy components for Xcode][4] script for one such example.
+
 
 Getting the AudioUnit SDK installed
 -----------------------------------
@@ -76,7 +79,7 @@ at line 257 to:
 However, using Apple's LLVM compiler will also give you problems while
 building the VST SDK, which is a pain if you intend for your plugin to support
 both. In addition to the fix above, you'll also need to edit
-`audioeffectx.cpp` at line 512 to be:
+`audioeffect.cpp` at line 512 to be:
 
 {% highlight cpp %}
 
@@ -113,3 +116,4 @@ templates][3].
 [1]: https://developer.apple.com/downloads/index.action
 [2]: https://github.com/teragonaudio/XcodeVstTemplates
 [3]: http://www.mojolama.com/restore-apples-audio-unit-templates
+[4]: http://devernay.free.fr/hacks/xcodelegacy/
