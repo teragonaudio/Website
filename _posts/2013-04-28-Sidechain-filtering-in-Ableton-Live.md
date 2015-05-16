@@ -42,18 +42,18 @@ First, set up a return track named "sidechain" (always label your tracks!) and
 set the output to "Sends Only". Route all tracks to this one by turning the
 send knob up to the maximum.
 
-![Setting up return tracks for sidechaining](http://static.teragonaudio.com/sidechain-filtering-basic-setup.png)
+![Setting up return tracks for sidechaining](http://static.teragonaudio.com/website/sidechain-filtering-basic-setup.png)
 
 Next, put an EQ Eight in the sidechain return track. Configure it to be a
 lowpass filter with a cutoff frequency of around 650Hz and set the Q to 1.0.
 
-![Lowpass filter configuration](http://static.teragonaudio.com/sidechain-filtering-lowpass-filter.png)
+![Lowpass filter configuration](http://static.teragonaudio.com/website/sidechain-filtering-lowpass-filter.png)
 
 Now, in each deck track, add a Compressor. Expand it by clicking the small
 downward-pointing arrow in the top left-hand corner, and enable sidechaining.
 Set "Audio From" to be "A-Sidechain", Post FX.
 
-![Sidechain compressor configuration](http://static.teragonaudio.com/sidechain-flitering-sidechain-compressor.png)
+![Sidechain compressor configuration](http://static.teragonaudio.com/website/sidechain-flitering-sidechain-compressor.png)
 
 To actually apply the sidechain filter, MIDI map the "Gain" knob with a range
 of 0.00 dB - 24.0 dB. At 0.00 dB, no filtering is applied. At 24.0 dB, the
@@ -86,14 +86,14 @@ create two new audio tracks, named "Sidechain 1" and "Sidechain 2". Set their
 outputs to "Sends Only" and have them pull audio from "Deck 1" and "Deck 2",
 respectively. Also set monitoring to "In" for both sidechain tracks.
 
-![Setting up tracks for sidechaining](http://static.teragonaudio.com/sidechaing-filtering-tracks-setup.png)
+![Setting up tracks for sidechaining](http://static.teragonaudio.com/website/sidechaing-filtering-tracks-setup.png)
 
 In each sidechain track, add the same EQ Eight as was described above. Now,
 for both Deck 1 & 2, set the compressor's sidechain input to be the output of
 the other's sidechain track, so that in Deck 1 the compressor pulls audio from
 Sidechain 2, and vice versa.
 
-![Sidechain compressor for tracks](http://static.teragonaudio.com/sidechain-filtering-pull-from-track.png)
+![Sidechain compressor for tracks](http://static.teragonaudio.com/website/sidechain-filtering-pull-from-track.png)
 
 Now the sidechain setup involves no return tracks, and leaving the Gain up
 will have no effect if only one track is playing. The result is an even
@@ -116,7 +116,7 @@ into an audio effect rack. Turn on mapping mode, and set the Gain of *both*
 compressors to a knob in the rack. Now when this knob is turned, it will
 subtract bass from all other tracks.
 
-![Filtering from mulitple tracks](http://static.teragonaudio.com/sidechain-filtering-multiple-tracks.png)
+![Filtering from mulitple tracks](http://static.teragonaudio.com/website/sidechain-filtering-multiple-tracks.png)
 
 For 4 decks, just repeat this procedure and add an extra compressor to the
 rack. Finally, I like to group the sidechain audio tracks and fold it away;
@@ -126,4 +126,4 @@ tucked away in the liveset.
 Happy mixing!
 
 
-[1]: http://static.teragonaudio.com/sidechain-filtering-example.mp3
+[1]: http://static.teragonaudio.com/website/sidechain-filtering-example.mp3

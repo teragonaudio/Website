@@ -81,7 +81,7 @@ in hardware.
 First, set up Traktor to use an external mixer, and route each deck to a
 separate output channel, as pictured below:
 
-![Traktor External Output Routing](http://static.teragonaudio.com/ta-djsync-traktor-output-routing.png)
+![Traktor External Output Routing](http://static.teragonaudio.com/website/ta-djsync-traktor-output-routing.png)
 
 Even if you use an external mixer, you will still be able to use Traktor's own
 filters and effects.
@@ -93,11 +93,11 @@ thing and is rather cheap.
 
 Then, set up Live to record from the same channels:
 
-[![Ableton Live Input Routings](http://static.teragonaudio.com/ta-djsync-live-audio-inputs-thumb.png)][10]
+[![Ableton Live Input Routings](http://static.teragonaudio.com/website/ta-djsync-live-audio-inputs-thumb.png)][10]
 
 Finally, create audio tracks in Live to route the audio from Traktor:
 
-[![Ableton Live Track Routings](http://static.teragonaudio.com/ta-djsync-live-traktor-routing-tracks-thumb.png)][11]
+[![Ableton Live Track Routings](http://static.teragonaudio.com/website/ta-djsync-live-traktor-routing-tracks-thumb.png)][11]
 
 Assuming that you have a multi-channel soundcard, you can now cue and route
 these output tracks as you would other tracks within Live.
@@ -128,35 +128,35 @@ tutorials][6], and assuming that you don't need a tight or accurate sync, it
 works ok (with a few caveats). To set this up, first go to Traktor's
 preferences and enable sending MIDI clock:
 
-![Traktor Enable MIDI Clock](http://static.teragonaudio.com/ta-djsync-traktor-send-midi-clock.png)
+![Traktor Enable MIDI Clock](http://static.teragonaudio.com/website/ta-djsync-traktor-send-midi-clock.png)
 
 For some reason, this isn't actually enough to get Traktor to send the clock
 signal. You also need to create a virtual output device by going to the
 "Controller Manager" section and adding a new Generic MIDI Device. Now set the
 output of this device to be Traktor Virtual Output:
 
-![Traktor Controller Manager](http://static.teragonaudio.com/ta-djsync-traktor-controller-manager-1.png)
-![Traktor Controller Manager](http://static.teragonaudio.com/ta-djsync-traktor-controller-manager-2.png)
+![Traktor Controller Manager](http://static.teragonaudio.com/website/ta-djsync-traktor-controller-manager-1.png)
+![Traktor Controller Manager](http://static.teragonaudio.com/website/ta-djsync-traktor-controller-manager-2.png)
 
 Just creating the device is enough; you don't need to make any mappings. You
 should now see MIDI clock messages in a utility like [MIDI Monitor][4] or
 [MIDI-OX][5]. Now within Live, go to the MIDI preference pane and sync Live to
 Traktor's virtual MIDI output:
 
-![Ableton Live MIDI clock sync](http://static.teragonaudio.com/ta-djsync-live-midi-config.png)
+![Ableton Live MIDI clock sync](http://static.teragonaudio.com/website/ta-djsync-live-midi-config.png)
 
 You will also need to enable the "EXT" button in Live to get it to slave its
 transport to Traktor. When you start playing, you will see that Live starts
 and will roughly match its BPM to Traktor's.
 
-![Ableton Live External Sync](http://static.teragonaudio.com/ta-djsync-live-ext-button.png)
+![Ableton Live External Sync](http://static.teragonaudio.com/website/ta-djsync-live-ext-button.png)
 
 The next step is to tighten the sync up as much as possible. To do this, turn
 on the metronome in Traktor by switching to the "Extended" layout and enabling
 the "TICK" button. You will also need to cue at least one deck (doesn't matter
 which one) to hear the tick within Live.
 
-[![Traktor metronome](http://static.teragonaudio.com/ta-djsync-traktor-tick-thumb.png)][14]
+[![Traktor metronome](http://static.teragonaudio.com/website/ta-djsync-traktor-tick-thumb.png)][14]
 
 Start playing a song in Traktor, but mute it by keeping the volume fader at
 zero. Switch back to Live and enable the metronome. You should now hear the
@@ -246,7 +246,7 @@ I have managed to get the above setup working on a somewhat old Macbook Pro
 size of 256 samples at a sample rate of 44.1kHz). CPU usage is a constant ~40%
 per core, and I get no audio dropouts at all:
 
-[![Screenshot of Traktor + Live](http://static.teragonaudio.com/ta-djsync-runtime-performance-thumb.png)][12]
+[![Screenshot of Traktor + Live](http://static.teragonaudio.com/website/ta-djsync-runtime-performance-thumb.png)][12]
 
 As my processor has only two cores, I found that disabling multiprocessor
 support in both Live and Traktor provides a bit better performance. However,
@@ -277,8 +277,8 @@ Soundflower then give Jack a try.
 [7]: http://www.beginnerdj.com/how-to-beat-match
 [8]: https://code.google.com/p/soundflower/issues/detail?id=24
 [9]: http://jackosx.com/
-[10]: http://static.teragonaudio.com/ta-djsync-live-audio-inputs.png
-[11]: http://static.teragonaudio.com/ta-djsync-live-traktor-routing-tracks.png
-[12]: http://static.teragonaudio.com/ta-djsync-runtime-performance.png
-[13]: http://static.teragonaudio.com/ta-djsync-hardware-routing.jpg
-[14]: http://static.teragonaudio.com/ta-djsync-traktor-tick.png
+[10]: http://static.teragonaudio.com/website/ta-djsync-live-audio-inputs.png
+[11]: http://static.teragonaudio.com/website/ta-djsync-live-traktor-routing-tracks.png
+[12]: http://static.teragonaudio.com/website/ta-djsync-runtime-performance.png
+[13]: http://static.teragonaudio.com/website/ta-djsync-hardware-routing.jpg
+[14]: http://static.teragonaudio.com/website/ta-djsync-traktor-tick.png

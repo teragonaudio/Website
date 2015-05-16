@@ -15,7 +15,7 @@ name suggests, is not actually a notch filter. Rather, it is a combination of
 a hipass and lopass filter which work on opposite sides of the target
 frequency.
 
-![NotNotchFilter User Interface](http://static.teragonaudio.com/ta_notnotchfilter.png)
+![NotNotchFilter User Interface](http://static.teragonaudio.com//website/ta_notnotchfilter.png)
 
 
 Usage

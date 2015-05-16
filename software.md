@@ -59,27 +59,27 @@ Utilities
 
 
 [1]: /KickMaker.html
-[2]: http://static.teragonaudio.com/KickMaker.zip
+[2]: http://static.teragonaudio.com/downloads/KickMaker/KickMaker.zip
 [3]: /BeatCounter.html
-[4]: http://static.teragonaudio.com/BeatCounter.zip
+[4]: http://static.teragonaudio.com/downloads/BeatCounter/BeatCounter.zip
 [5]: /ExtraNotes.html
-[6]: http://static.teragonaudio.com/ExtraNotes.zip
+[6]: http://static.teragonaudio.com/downloads/ExtraNotes/ExtraNotes.zip
 [7]: /HiLoFilter.html
-[8]: http://static.teragonaudio.com/HiLoFilter.zip
+[8]: http://static.teragonaudio.com/downloads/HiLoFilter/HiLoFilter.zip
 [9]: /PulseDelay.html
-[10]: http://static.teragonaudio.com/PulseDelay.zip
+[10]: http://static.teragonaudio.com/attic/PulseDelay.zip
 [11]: /MrsWatson.html
-[12]: http://static.teragonaudio.com/MrsWatson.zip
+[12]: http://static.teragonaudio.com/downloads/MrsWatson/MrsWatson.zip
 [13]: https://github.com/teragonaudio/gogo-no-coda
 [14]: http://homepage2.nifty.com/kei-i/
 [15]: /DJToolbox.html
-[16]: http://static.teragonaudio.com/DJToolbox.zip
+[16]: http://static.teragonaudio.com/attic/DJToolbox.zip
 [17]: /NotNotchFilter.html
-[18]: http://static.teragonaudio.com/NotNotchFilter.zip
+[18]: http://static.teragonaudio.com/downloads/NotNotchFilter/NotNotchFilter.zip
 [19]: https://github.com/nikreiman/AndroidScreenshot
-[20]: http://static.teragonaudio.com/AndroidScreenshot.zip
+[20]: http://static.teragonaudio.com/attic/AndroidScreenshot.zip
 [21]: /ChaosChimp.html
-[22]: http://static.teragonaudio.com/ChaosChimp.zip
+[22]: http://static.teragonaudio.com/downloads/ChaosChimp/ChaosChimp.zip
 [23]: /PluginParameters.html
 [24]: https://github.com/teragonaudio/PluginParameters
 [25]: /TeragonGuiComponents.html

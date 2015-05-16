@@ -12,8 +12,8 @@ arrangement. Formerly called "AUNotes", ExtraNotes now supports Mac OSX,
 Windows, and Linux with 64-bit versions on all platforms (whereas AUNotes was
 an AudioUnit plugin for Mac OSX only).
 
-![ExtraNotes Text Editing](http://static.teragonaudio.com/ta_extranotes.png)
-![ExtraNotes Image Editing](http://static.teragonaudio.com/ta_extranotes_image.png)
+![ExtraNotes Text Editing](http://static.teragonaudio.com/website/ta_extranotes.png)
+![ExtraNotes Image Editing](http://static.teragonaudio.com/website/ta_extranotes_image.png)
 
 
 Usage

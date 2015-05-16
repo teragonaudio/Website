@@ -9,12 +9,12 @@ Audio Utilities
 **MrsWatson** - A command-line audio plugin host
 
 * [MrsWatson Project Page](http://teragonaudio.github.com/MrsWatson)
-* [Download latest version](http://static.teragonaudio.com/MrsWatson.zip)
+* [Download latest version](http://static.teragonaudio.com/downloads/MrsWatson/MrsWatson.zip)
 
-**DJToolbox** - *Beta* A grab-bag of utilities for managing a digital music library
+**DJToolbox** - *Unmaintained* A grab-bag of utilities for managing a digital music library
 
 * [DJToolbox Project Page](http://teragonaudio.github.com/DJToolbox)
-* [Download latest version](http://static.teragonaudio.com/DJToolbox.zip)
+* [Download latest version](http://static.teragonaudio.com/attic/DJToolbox.zip)
 
 **gogo-no-coda** - Mirror of the insanely fast gogo mp3 encoder
 

@@ -15,7 +15,7 @@ system and not the iTunes Library database.
 DJToolbox also allows one to easily switch the library location, making it
 easy to manage multiple libraries on the same hard drive.
 
-![DJToolbox Screenshot](http://static.teragonaudio.com/ta_djtoolbox_ableton.png)
+![DJToolbox Screenshot](http://static.teragonaudio.com/website/ta_djtoolbox_ableton.png)
 
 
 Features

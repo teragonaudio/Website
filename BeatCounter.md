@@ -13,7 +13,7 @@ an accumulated average over the last few seconds.  BeatCounter is the perfect
 tool for DJ's that want to integrate computer effects with turntables or a
 live band.
 
-![BeatCounter User Interface](http://static.teragonaudio.com/ta_beatcounter.jpg)
+![BeatCounter User Interface](http://static.teragonaudio.com/website/ta_beatcounter.jpg)
 
 
 Parameters

@@ -29,7 +29,7 @@ on iOS, the hard and old-fashioned way. So before we get started with the
 dirty details, it's worth asking yourself if you really, really need to do
 things the hard way.
 
-![Which path do you really want to choose?](http://static.teragonaudio.com/road-to-heaven-or-hell.jpg)
+![Which path do you really want to choose?](http://static.teragonaudio.com/website/road-to-heaven-or-hell.jpg)
 
 There is actually an easier way to do all of this, and it's a framework called
 [novocaine][1]. The framework name says it all; it provides a painless way of
@@ -58,7 +58,7 @@ point of audio data, sometimes called a sample frame. A group of samples comes
 together to make a channel, just like the left & right channels of a stereo
 signal. Finally, a packet contains one or more channels.
 
-![Visual representation of iOS buffers](http://static.teragonaudio.com/ios-buffers.png)
+![Visual representation of iOS buffers](http://static.teragonaudio.com/website/ios-buffers.png)
 
 You might be wondering why each channel only contains one frame. I don't know
 the answer to that; at least on the iPhone this is simply the way that audio

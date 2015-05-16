@@ -11,7 +11,7 @@ KickMaker is a synthesizer designed specifically to create good kick drum
 sounds. It uses four independent oscillators and a wide range of effects,
 allowing one to create perfectly customized beats.
 
-![KickMaker Screenshot](http://static.teragonaudio.com/ta_kickmaker.jpg)
+![KickMaker Screenshot](http://static.teragonaudio.com/website/ta_kickmaker.jpg)
 
 Features
 --------

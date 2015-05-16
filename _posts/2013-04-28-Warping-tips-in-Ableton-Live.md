@@ -235,11 +235,11 @@ The transient artifacts in the Beats warp mode can do some cool stuff as an
 unintended effect, especially with non-percussive material. For example, it
 can act as a strange gate when set to "off" with an envelope length of 0:
 
-![Abusing Beats as a Gate effect](http://static.teragonaudio.com/warping-tricks-gate.png)
+![Abusing Beats as a Gate effect](http://static.teragonaudio.com/website/warping-tricks-gate.png)
 
 You'll also need to play around with the "Preserve" value make sure that some
 audio is still produced at regular intervals.
 
 
 [1]: https://forum.ableton.com/viewtopic.php?p=1494129#p1494129
-[2]: http://static.teragonaudio.com/warping-tricks-unwarped-mixing.mp3
+[2]: http://static.teragonaudio.com/website/warping-tricks-unwarped-mixing.mp3

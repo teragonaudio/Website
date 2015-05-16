@@ -117,6 +117,6 @@ And for more dramatic effects, usually ones you'd want to control with a knob:
 
 [1]: http://www.plogue.com/products/chipsounds/
 [2]: http://www.syntax-error.se/
-[3]: http://static.teragonaudio.com/chipsounds-on-live-panic.midi
-[4]: http://static.teragonaudio.com/chipsounds-on-live-chipfx.adg
+[3]: http://static.teragonaudio.com/website/chipsounds-on-live-panic.midi
+[4]: http://static.teragonaudio.com/website/chipsounds-on-live-chipfx.adg
 [5]: http://4live.me/tagged/oneknob#.UX4qcKDmpIM

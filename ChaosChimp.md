@@ -12,7 +12,7 @@ sequencer. Seriously! It's inspired by [Netflix's ChaosMonkey][1], which was
 built under the philosophy that instead of hoping bad things never happen,
 they should be forced to happen often so that one is better prepared for them.
 
-![ChaosChimp User Interface](http://static.teragonaudio.com/ta_chaoschimp.png)
+![ChaosChimp User Interface](http://static.teragonaudio.com/website/ta_chaoschimp.png)
 
 
 Why On Earth??

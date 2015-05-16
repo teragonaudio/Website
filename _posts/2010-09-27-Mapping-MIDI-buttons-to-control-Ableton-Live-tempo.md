@@ -42,7 +42,7 @@ matter which one) to assign this CC to the tempo. Now click on the tempo
 control again after assigning it, and then at the bottom of the screen change
 the mode to "Relative (Signed Bit)".
 
-![Changing the control's mode](http://static.teragonaudio.com/ableton-live-control-tempo-midi.png)
+![Changing the control's mode](http://static.teragonaudio.com/website/ableton-live-control-tempo-midi.png)
 
 The MIDI buttons should now increase and decrease the tempo. Hooray! This
 trick is a bit non-intuitive, but it is actually documented in Live's manual
