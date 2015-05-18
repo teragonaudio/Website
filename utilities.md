@@ -22,5 +22,5 @@ Audio Utilities
 
 **id3reader** - A python module for reading ID3 metadata from MP3 files
 
-* [id3reader project page](https://github.com/nikreiman/id3reader)
+* [id3reader project page](https://github.com/teragonaudio/id3reader)
 
