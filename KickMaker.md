@@ -1,7 +1,10 @@
 ---
 layout: product
 title: KickMaker
-alias: /p/KickMaker.html
+redirect_from:
+  - /kickmaker/
+  - /KickMaker/
+  - /p/KickMaker.html
 ---
 
 About KickMaker
