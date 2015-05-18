@@ -1,2 +1,4 @@
 permalink: /article/:title.html
-pygments: true
+highlighter: pygments
+gems:
+  - jekyll-redirect-from
