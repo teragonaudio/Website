@@ -23,6 +23,7 @@ And the following ruby gems:
 
  * jekyll
  * jekyll-redirect-from
+ * redcarpet
 
 
 Generation
