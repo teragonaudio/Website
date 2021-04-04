@@ -8,6 +8,9 @@ redirect_from:
 ExtraNotes
 ==========
 
+**NOTE**: This software is unsupported and is no longer being updated or
+maintained. It likely will not work on newer versions of macOS.
+
 ExtraNotes is a simple plugin for keeping text or image notes alongside an
 arrangement. Formerly called "AUNotes", ExtraNotes now supports Mac OSX,
 Windows, and Linux with 64-bit versions on all platforms (whereas AUNotes was

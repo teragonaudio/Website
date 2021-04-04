@@ -8,6 +8,9 @@ redirect_from:
 BeatCounter
 ===========
 
+**NOTE**: This software is unsupported and is no longer being updated or
+maintained. It likely will not work on newer versions of macOS.
+
 BeatCounter is a simple plugin designed to facilitate beatmatching software
 and turntables. It displays the current tempo in beats per minute (BPM), and
 an accumulated average over the last few seconds.  BeatCounter is the perfect

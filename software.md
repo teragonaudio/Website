@@ -8,6 +8,9 @@ redirect_from:
 Instrument Plug-Ins
 -------------------
 
+**NOTE**: This software is unsupported and is no longer being updated or
+maintained. It likely will not work on newer versions of macOS.
+
 **[KickMaker][1]** - A synthesizer specifically to create kick drum sounds
 * [KickMaker project page][1]
 * [Download latest version][2]
@@ -15,6 +18,9 @@ Instrument Plug-Ins
 
 Effect Plug-Ins
 ---------------
+
+**NOTE**: This software is unsupported and is no longer being updated or
+maintained. It likely will not work on newer versions of macOS.
 
 **[BeatCounter][3]** - Detect tempo in BPM for a track
 * [BeatCounter project page][3]
@@ -39,6 +45,9 @@ Effect Plug-Ins
 
 Utilities
 ---------
+
+**NOTE**: This software is unsupported and is no longer being updated or
+maintained. It likely will not work on newer versions of macOS.
 
 **[MrsWatson][11]** - A command-line VST plugin host
 * [MrsWatson project page][11]

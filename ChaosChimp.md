@@ -8,6 +8,9 @@ redirect_from:
 ChaosChimp
 ==========
 
+**NOTE**: This software is unsupported and is no longer being updated or
+maintained. It likely will not work on newer versions of macOS.
+
 ChaosChimp is an audio effect plugin designed to cause problems for your
 sequencer. Seriously! It's inspired by [Netflix's ChaosMonkey][1], which was
 built under the philosophy that instead of hoping bad things never happen,

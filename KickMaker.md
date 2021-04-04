@@ -10,6 +10,12 @@ redirect_from:
 About KickMaker
 ===============
 
+**NOTE**: This software is unsupported and is no longer being updated or
+maintained. It likely will not work on newer versions of macOS.
+
+**NOTE**: KickMaker is a **32-bit** plugin and requires a 32-bit host or a
+bridge adapter plugin. It **will not work in a 64-bit host**.
+
 KickMaker is a synthesizer designed specifically to create good kick drum
 sounds. It uses four independent oscillators and a wide range of effects,
 allowing one to create perfectly customized beats.

@@ -8,6 +8,9 @@ redirect_from:
 HiLoFilter
 ==========
 
+**NOTE**: This software is unsupported and is no longer being updated or
+maintained. It likely will not work on newer versions of macOS.
+
 HiLoFilter is a simple hipass and lopass filter which can be easily controlled
 with a single knob. It is loosely inspired by the same type of filter found on
 some Pioneer DJM mixers, and also the [The Pilgrim][1], another great plugin

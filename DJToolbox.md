@@ -8,6 +8,9 @@ redirect_from:
 DJToolbox
 =========
 
+**NOTE**: This software is unsupported and is no longer being updated or
+maintained. It likely will not work on newer versions of macOS.
+
 DJToolbox is a grab-bag of utilities for managing a digital music library.
 Most of the tools are designed to help find missing files and to keep the
 library clean and well-organized. The operations are all performed on the file

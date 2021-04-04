@@ -8,6 +8,9 @@ redirect_from:
 MrsWatson
 =========
 
+**NOTE**: This software is unsupported and is no longer being updated or
+maintained. It likely will not work on newer versions of macOS.
+
 MrsWatson is a command-line audio plugin host. It takes an audio and/or MIDI
 file as input, and processes it through one or more audio plugins. Currently
 MrsWatson only supports VST 2.x plugins, but more formats are planned in the

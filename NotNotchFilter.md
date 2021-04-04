@@ -8,6 +8,9 @@ redirect_from:
 NotNotchFilter
 ==============
 
+**NOTE**: This software is unsupported and is no longer being updated or
+maintained. It likely will not work on newer versions of macOS.
+
 NotNotchFilter is a performance-oriented filter designed to replace the mid-EQ
 found in a standard 3-band DJ mixer. The key advantage of this filter is that
 it cleanly cuts out single voices or instruments in a track, whereas a
