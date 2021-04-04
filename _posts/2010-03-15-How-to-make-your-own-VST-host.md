@@ -3,7 +3,8 @@ layout: default
 title: How to make your own VST host
 category: development
 tags: [ VST, Intro ]
-alias: /2010/03/how-to-make-your-own-vst-host.html
+redirect_from:
+  - /2010/03/how-to-make-your-own-vst-host.html
 ---
 
 Introduction

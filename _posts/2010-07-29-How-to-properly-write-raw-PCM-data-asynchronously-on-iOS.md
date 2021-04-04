@@ -3,7 +3,8 @@ layout: default
 title: How to properly write raw PCM data asynchronously on iOS
 category: development
 tags: [ iOS, iPhone ]
-alias: /2012/05/how-to-properly-write-pcm-data-in.html
+redirect_from:
+  - /2012/05/how-to-properly-write-pcm-data-in.html
 ---
 
 My colleagues just fixed a huge show-stopper bug having to do with writing PCM

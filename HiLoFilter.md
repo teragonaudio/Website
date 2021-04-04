@@ -1,7 +1,8 @@
 ---
 layout: product
 title: HiLoFilter
-alias: /p/HiLoFilter.html
+redirect_from:
+  - /p/HiLoFilter.html
 ---
 
 HiLoFilter

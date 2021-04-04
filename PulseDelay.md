@@ -1,7 +1,8 @@
 ---
 layout: product
 title: PulseDelay
-alias: /p/PulseDelay.html
+redirect_from:
+  - /p/PulseDelay.html
 ---
 
 PulseDelay

@@ -1,7 +1,8 @@
 ---
 layout: product
 title: AUNotes
-alias: /p/AUNotes.html
+redirect_from:
+  - /p/AUNotes.html
 ---
 
 AUNotes has been renamed!

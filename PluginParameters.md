@@ -1,7 +1,8 @@
 ---
 layout: product
 title: PluginParameters
-alias: /p/PluginParameters.html
+redirect_from:
+  - /p/PluginParameters.html
 ---
 
 PluginParameters

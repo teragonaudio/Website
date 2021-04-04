@@ -1,4 +1,7 @@
 permalink: /article/:title.html
-highlighter: pygments
-gems:
+highlighter: redcarpet
+plugins:
+  - redcarpet
+  - jekyll-redirect-from
+whitelist:
   - jekyll-redirect-from

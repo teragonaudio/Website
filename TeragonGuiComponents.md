@@ -1,7 +1,8 @@
 ---
 layout: product
 title: TeragonGuiComponents
-alias: /p/TeragonGuiComponents.html
+redirect_from:
+  - /p/TeragonGuiComponents.html
 ---
 
 TeragonGuiComponents

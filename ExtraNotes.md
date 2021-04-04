@@ -1,7 +1,8 @@
 ---
 layout: product
 title: ExtraNotes
-alias: /p/ExtraNotes.html
+redirect_from:
+  - /p/ExtraNotes.html
 ---
 
 ExtraNotes

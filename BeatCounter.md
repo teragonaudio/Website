@@ -1,7 +1,8 @@
 ---
 layout: product
 title: BeatCounter
-alias: /p/BeatCounter.html
+redirect_from:
+  - /p/BeatCounter.html
 ---
 
 BeatCounter

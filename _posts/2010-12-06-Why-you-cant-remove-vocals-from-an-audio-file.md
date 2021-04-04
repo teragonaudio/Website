@@ -3,7 +3,8 @@ layout: default
 title: Why you can't just remove vocals or make an A Capella of an audio file
 category: development
 tags: [ rant, mastering ]
-alias: /2012/05/just-for-record-why-you-cant-remove.html
+redirect_from:
+  - /2012/05/just-for-record-why-you-cant-remove.html
 ---
 
 In a similar vein to my previous rant about why you can't convert between

@@ -1,7 +1,8 @@
 ---
 layout: product
 title: MrsWatson
-alias: /p/MrsWatson.html
+redirect_from:
+  - /p/MrsWatson.html
 ---
 
 MrsWatson

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Audio Software
-alias: /p/plugins.html
+redirect_from:
+  - /p/plugins.html
 ---
 
 Instrument Plug-Ins

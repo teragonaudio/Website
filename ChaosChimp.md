@@ -1,7 +1,8 @@
 ---
 layout: product
 title: ChaosChimp
-alias: /p/ChaosChimp.html
+redirect_from:
+  - /p/ChaosChimp.html
 ---
 
 ChaosChimp

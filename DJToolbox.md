@@ -1,7 +1,8 @@
 ---
 layout: product
 title: DJToolbox
-alias: /p/DJToolbox.html
+redirect_from:
+  - /p/DJToolbox.html
 ---
 
 DJToolbox

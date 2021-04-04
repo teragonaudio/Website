@@ -1,7 +1,8 @@
 ---
 layout: product
 title: Arooo
-alias: /p/Arooo.html
+redirect_from:
+  - /p/Arooo.html
 ---
 
 Arooo

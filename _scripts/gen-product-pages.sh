@@ -42,7 +42,7 @@ function generateProductPage() {
     local productName=$(basename $productDir)
     local outputFile="${productName}.md"
     echo "Generating product page for $productName"
-    printf "%s\nlayout: product\ntitle: %s\nalias: /p/%s.html\n%s\n\n" "$dashes" "$productName" "$productName" "$dashes" > "$outputFile"
+    printf "%s\nlayout: product\ntitle: %s\nredirect_from:\n  - /p/%s.html\n%s\n\n" "$dashes" "$productName" "$productName" "$dashes" > "$outputFile"
     cat "$productDir/README.md" | sed -e 's/```c++/\{% highlight cpp %\}/' | sed -e 's/```/\{% endhighlight %\}/' | sed -e 's/^\[[0-9]*\]:.*$//' >> "$outputFile"
     appendChangelog "$productDir" "$outputFile"
     cat "$productDir/README.md" | grep -e '^\[[0-9]*\]:.*$' >> "$outputFile"

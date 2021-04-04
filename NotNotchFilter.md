@@ -1,7 +1,8 @@
 ---
 layout: product
 title: NotNotchFilter
-alias: /p/NotNotchFilter.html
+redirect_from:
+  - /p/NotNotchFilter.html
 ---
 
 NotNotchFilter

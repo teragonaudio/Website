@@ -3,7 +3,8 @@ layout: default
 title: Why you can't convert between MIDI and audio files
 category: development
 tags: [ MIDI, rant ]
-alias: /2012/05/just-for-record-why-you-cant-convert.html
+redirect_from:
+  - /2012/05/just-for-record-why-you-cant-convert.html
 ---
 
 This is a little rant that has been brewing inside of me for some while now.

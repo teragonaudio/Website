@@ -3,7 +3,8 @@ layout: default
 title: How to do realtime recording with effect processing on iOS
 category: development
 tags: [ iOS, iPhone, AudioUnits ]
-alias: /2012/05/how-to-do-realtime-recording-with.html
+redirect_from:
+  - /2012/05/how-to-do-realtime-recording-with.html
 ---
 
 Introduction
